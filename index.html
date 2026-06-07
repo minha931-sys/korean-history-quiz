@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>한국사 10분 챌린지</title>
+
+    <meta name="description"
+          content="점심시간 10분, 한국사 실력을 점검해보세요.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+<button id="home-btn"
+        class="home-btn">
+
+    🏠 홈
+
+</button>
+<div class="container">
+
+    <!-- 홈 화면 -->
+
+    <section id="home-screen"
+             class="screen active">
+
+        <div class="hero-card">
+
+            <div class="logo">
+                📜
+            </div>
+
+            <h1>
+                한국사 10분 챌린지
+            </h1>
+
+            <p class="subtitle">
+                점심시간 10분, 한국사 실력 점검!
+            </p>
+
+            <div class="stats">
+
+                <div class="stat-box">
+
+                    <span>
+                        🏆 최고 기록
+                    </span>
+
+                    <strong id="best-score">
+                        0점
+                    </strong>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <span>
+                        🔥 플레이 횟수
+                    </span>
+
+                    <strong id="play-count">
+                        0회
+                    </strong>
+
+                </div>
+
+            </div>
+            <div class="category-select-box">
+
+            <label for="category-select">
+
+                📚 문제 범위 선택
+
+            </label>
+
+            <select id="category-select">
+
+                <option value="all">
+                    전체 문제
+                </option>
+
+                <option value="고조선·삼국">
+                    고조선·삼국
+                </option>
+
+                <option value="통일신라·발해">
+                    통일신라·발해
+                </option>
+
+                <option value="고려">
+                    고려
+                </option>
+
+                <option value="조선">
+                    조선
+                </option>
+
+                <option value="근현대">
+                    근현대
+                </option>
+
+            </select>
+
+        </div>
+            <button id="start-btn"
+                    class="primary-btn">
+
+                도전 시작
+
+            </button>
+
+            <button id="wrong-note-btn"
+                    class="secondary-btn">
+
+                📖 오답노트
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- 퀴즈 화면 -->
+
+    <section id="quiz-screen"
+             class="screen">
+
+        <div class="quiz-card">
+
+            <div class="quiz-header">
+
+                <h2 id="question-number">
+                    문제 1 / 10
+                </h2>
+
+                <span id="progress-text">
+                    10%
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress-fill">
+                </div>
+
+            </div>
+
+            <div class="question-box">
+
+                <p id="question-text">
+                </p>
+
+            </div>
+            
+            <div class="choices">
+
+                <button class="choice-btn"></button>
+                <button class="choice-btn"></button>
+                <button class="choice-btn"></button>
+                <button class="choice-btn"></button>
+
+            </div>
+
+            <div id="explanation-box"
+                 class="explanation-box">
+            </div>
+
+            <button id="next-btn"
+                    class="primary-btn"
+                    style="display:none; margin-bottom:20px;">
+
+                다음 문제
+
+            </button>
+
+            
+
+        </div>
+
+    </section>
+
+    <!-- 결과 화면 -->
+
+    <section id="result-screen"
+             class="screen">
+
+        <div class="result-card">
+
+            <h2>
+                🎉 결과
+            </h2>
+
+            <div id="score-display"
+                 class="score-display">
+            </div>
+
+            <div id="grade-card"
+                 class="grade-card">
+            </div>
+
+            <div class="result-actions">
+
+                <button id="restart-btn"
+                    class="primary-btn">
+
+                    다시 도전
+
+                </button>
+
+                <button id="retry-wrong-btn"
+                    class="secondary-btn"
+                    style="display:none;">
+
+        틀린 문제 다시 풀기
+
+    </button>
+
+    <button id="share-btn"
+            class="secondary-btn">
+
+        결과 공유
+
+    </button>
+
+</div>
+
+        </div>
+
+    </section>
+
+    <section id="wrong-note-screen"
+         class="screen">
+
+    <div class="result-card">
+
+        <h2>
+            📖 오답노트
+        </h2>
+
+        <div id="wrong-note-list">
+        </div>
+
+        <div class="result-actions">
+
+            
+                    
+            <button id="study-wrong-btn"
+                    class="primary-btn">
+
+                📚 오답문제 풀기
+
+            </button>
+            <button id="clear-note-btn"
+                    class="secondary-btn">
+                오답노트 초기화
+
+            </button>
+
+            <button id="back-home-btn"
+                    class="primary-btn">
+
+                홈으로
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="js/questions/ancient.js"></script>
+<script src="js/questions/unified.js"></script>
+<script src="js/questions/goryeo.js"></script>
+<script src="js/questions/joseon.js"></script>
+<script src="js/questions/modern.js"></script>
+
+<script src="js/questions.js"></script>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+const QUESTIONS = [
+
+    ...ANCIENT_QUESTIONS,
+
+    ...UNIFIED_QUESTIONS,
+
+    ...GORYEO_QUESTIONS,
+
+    ...JOSEON_QUESTIONS,
+
+    ...MODERN_QUESTIONS
+
+];
