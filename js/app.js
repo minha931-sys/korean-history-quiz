@@ -198,64 +198,28 @@ function startQuiz(){
 
 }
 
-function showQuestion(){
-    const oldInlineExplanation =
-        document.querySelector(
-            ".inline-explanation"
-        );
+nextBtn.addEventListener(
+    "click",
+    ()=>{
 
-    if(oldInlineExplanation){
+        currentQuestionIndex++;
 
-        oldInlineExplanation.remove();
+        if(
+            currentQuestionIndex >=
+            selectedQuestions.length
+        ){
+
+            showResult();
+
+        }else{
+
+            showQuestion();
+
+        }
 
     }
+);
 
-    const question =
-        selectedQuestions[
-            currentQuestionIndex
-        ];
-
-    questionText.textContent =
-        question.question;
-
-    questionNumber.textContent =
-        `문제 ${
-        currentQuestionIndex + 1
-        } / ${
-        selectedQuestions.length
-        }`;
-
-    progressText.textContent =
-        `${(currentQuestionIndex + 1) * 10}%`;
-
-    progressFill.style.width =
-        `${(currentQuestionIndex + 1) * 10}%`;
-
-    explanationBox.innerHTML = "";
-
-    explanationBox.style.display =
-        "none";
-
-    nextBtn.style.display =
-        "none";
-
-    choiceButtons.forEach(
-        (button,index)=>{
-
-        button.disabled = false;
-
-        button.classList.remove(
-            "correct",
-            "wrong",
-            "selected"
-        );
-
-        button.textContent =
-            question.choices[index];
-
-    });
-
-}
 
 function selectAnswer(index){
 
@@ -370,6 +334,70 @@ function selectAnswer(index){
 
 }
 
+function showQuestion(){
+    const oldExplanation =
+        document.querySelector(
+        ".inline-explanation"
+    );
+
+    if(oldExplanation){
+
+        oldExplanation.remove();
+
+    }
+    const question =
+        selectedQuestions[
+            currentQuestionIndex
+        ];
+
+    questionText.textContent =
+        question.question;
+
+    const totalQuestions =
+        selectedQuestions.length;
+
+    questionNumber.textContent =
+        `문제 ${currentQuestionIndex + 1} / ${totalQuestions}`;
+
+    const progress =
+        (
+            (currentQuestionIndex + 1)
+            / totalQuestions
+        ) * 100;
+
+    progressText.textContent =
+        `${Math.round(progress)}%`;
+
+    progressFill.style.width =
+        `${progress}%`;
+
+    explanationBox.style.display =
+        "none";
+
+    explanationBox.innerHTML = "";
+
+    nextBtn.style.display =
+        "none";
+
+    choiceButtons.forEach(
+        (button,index)=>{
+
+            button.disabled = false;
+
+            button.classList.remove(
+                "correct",
+                "wrong",
+                "selected"
+            );
+
+            button.textContent =
+                question.choices[index];
+
+        }
+    );
+
+}
+
 function getGrade(score){
 
     if(score >= 9){
@@ -420,19 +448,41 @@ function showResult(){
     resultScreen.classList.add(
         "active"
     );
-
+    const accuracy =
+        Math.round(
+            (score / selectedQuestions.length)
+            * 100
+        );
     scoreDisplay.innerHTML =
     `${score} / ${selectedQuestions.length}`;
 
-    gradeCard.innerHTML =
+    if(isRetryMode){
 
-        `
-        ${getGrade(score)}
-        <br><br>
-        정답률 ${score * 10}%
-        `;
+        gradeCard.innerHTML =
 
-    saveStats(score);
+            `
+            🎉 복습 완료
+            <br><br>
+            정답률 ${accuracy}%
+            `;
+
+    }else{
+
+        gradeCard.innerHTML =
+
+            `
+            ${getGrade(score)}
+            <br><br>
+            정답률 ${accuracy}%
+            `;
+
+    }
+
+    if(!isRetryMode){
+
+        saveStats(score);
+
+    }
     updateHomeButton();
 
     if(isRetryMode){
@@ -483,18 +533,36 @@ function shareResult(){
 
 `📜 한국사 10분 챌린지
 
-점수 : ${score}/10
+점수 : ${score}/${selectedQuestions.length}
 
 ${getGrade(score)}
 
-도전해보세요!`;
+당신은 몇 점 받을 수 있나요?
 
-    navigator.clipboard
-        .writeText(text);
+${window.location.href}`;
 
-    alert(
-        "결과가 복사되었습니다."
-    );
+    if(navigator.share){
+
+        navigator.share({
+
+            title:
+                "한국사 10분 챌린지",
+
+            text:
+                text
+
+        });
+
+    }else{
+
+        navigator.clipboard
+            .writeText(text);
+
+        alert(
+            "결과가 복사되었습니다."
+        );
+
+    }
 
 }
 
@@ -658,28 +726,6 @@ clearNoteBtn.addEventListener(
             clearWrongQuestions();
 
             showWrongNote();
-
-        }
-
-    }
-);
-
-nextBtn.addEventListener(
-    "click",
-    ()=>{
-
-        currentQuestionIndex++;
-
-        if(
-            currentQuestionIndex >=
-            selectedQuestions.length
-        ){
-
-            showResult();
-
-        }else{
-
-            showQuestion();
 
         }
 
