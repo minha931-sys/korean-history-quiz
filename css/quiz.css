@@ -289,11 +289,11 @@
 }
 .home-btn{
 
-    position:fixed;
+    position:absolute;
 
-    top:16px;
+    top:20px;
 
-    left:16px;
+    left:20px;
 
     width:50px;
 
@@ -304,8 +304,6 @@
     border-radius:50%;
 
     cursor:pointer;
-
-    z-index:9999;
 
     font-size:22px;
 
@@ -318,10 +316,6 @@
     box-shadow:
         0 4px 12px
         rgba(0,0,0,0.15);
-
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
     backdrop-filter: blur(8px);
 
 }
@@ -352,5 +346,10 @@
         font-size:20px;
 
     }
+
+}
+.container{
+
+    position:relative;
 
 }
