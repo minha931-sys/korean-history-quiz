@@ -391,3 +391,28 @@ h1{
     background:white;
 
 }
+
+.site-footer{
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+.site-footer a{
+
+    margin:0 10px;
+
+    text-decoration:none;
+
+}
+.container p{
+
+    margin-bottom:16px;
+
+}

@@ -354,3 +354,32 @@
     position:relative;
 
 }
+.site-footer{
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-top:1px solid #ddd;
+
+}
+
+.site-footer a{
+
+    margin:0 8px;
+
+    color:#666;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+.site-footer a:hover{
+
+    text-decoration:underline;
+
+}
