@@ -14,6 +14,27 @@ const STORAGE_KEYS = {
 
 };
 
+function safeParse(
+    value,
+    fallback
+){
+
+    try{
+
+        return JSON.parse(
+            value
+        ) || fallback;
+
+    }
+
+    catch{
+
+        return fallback;
+
+    }
+
+}
+
 function saveStats(score){
 
     const currentBest =
@@ -103,13 +124,15 @@ function loadStats(){
 
 function getWrongQuestions(){
 
-    return JSON.parse(
+    return safeParse(
 
         localStorage.getItem(
             STORAGE_KEYS.WRONG_NOTE
-        )
+        ),
 
-    ) || [];
+        []
+
+    );
 
 }
 
@@ -217,12 +240,20 @@ function removeWrongQuestion(questionId){
 }
 function updateStreak(){
 
+    const now =
+        new Date();
+
     const today =
 
-        new Date()
-        .toISOString()
-        .split("T")[0];
-
+        `${now.getFullYear()}-${
+            String(
+                now.getMonth() + 1
+            ).padStart(2,"0")
+        }-${
+            String(
+                now.getDate()
+            ).padStart(2,"0")
+        }`;
     const lastDate =
 
         localStorage.getItem(
@@ -314,13 +345,15 @@ function getStreakCount(){
 }
 function getRecentResults(){
 
-    return JSON.parse(
+    return safeParse(
 
         localStorage.getItem(
             STORAGE_KEYS.RECENT_RESULTS
-        )
+        ),
 
-    ) || [];
+        []
+
+    );
 
 }
 
@@ -375,13 +408,15 @@ function getRecentAccuracy(){
 }
 function getCategoryStats(){
 
-    return JSON.parse(
+    return safeParse(
 
         localStorage.getItem(
             STORAGE_KEYS.CATEGORY_STATS
-        )
+        ),
 
-    ) || {};
+        {}
+
+    );
 
 }
 

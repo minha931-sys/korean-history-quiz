@@ -871,6 +871,10 @@ homeBtn.addEventListener(
                 "active"
             );
 
+            analysisScreen.classList.remove(
+            "active"
+            );
+
             homeScreen.classList.add(
                 "active"
             );
