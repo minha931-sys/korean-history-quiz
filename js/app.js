@@ -953,15 +953,8 @@ function showAnalysis(){
             "analysis-summary"
         );
 
-    summary.innerHTML =
-
-    `
-    📚 누적 학습량
-
-    <strong>
-    ${totalSolved}문제
-    </strong>
-    `;
+    const strongest =
+        getStrongestCategory();
 
     let html = "";
 
@@ -1053,22 +1046,35 @@ ${accuracy}%
         }
     );
 
-    html += `
+    summary.innerHTML =
 
-<div class="weak-category">
+    `
+    📚 누적 학습량
 
-<div class="weak-category-title">
-📉 취약 파트
-</div>
+    <strong>
+    ${totalSolved}문제
+    </strong>
 
-<div class="weak-category-name">
-${weakestCategory}
-: ${lowestAccuracy}%
-</div>
+    <br><br>
 
-</div>
+    🏆 가장 강한 파트
 
-`;
+    <strong>
+    ${strongest.category}
+    :
+    ${strongest.accuracy}%
+    </strong>
+
+    <br><br>
+
+    📉 가장 취약한 파트
+
+    <strong style="color:#dc2626;">
+    ${weakestCategory}
+    :
+    ${lowestAccuracy}%
+    </strong>
+    `;
 
     content.innerHTML =
         html;

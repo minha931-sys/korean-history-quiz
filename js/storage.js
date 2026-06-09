@@ -493,3 +493,64 @@ function getWeakestCategory(){
     return weakestCategory;
 
 }
+function getStrongestCategory(){
+
+    const stats =
+        getCategoryStats();
+
+    let strongestCategory =
+        "";
+
+    let highestAccuracy =
+        -1;
+
+    Object.entries(stats)
+        .forEach(
+            ([category,data])=>{
+
+                if(
+                    data.total === 0
+                ){
+
+                    return;
+
+                }
+
+                const accuracy =
+
+                    Math.round(
+
+                        data.correct
+                        /
+                        data.total
+                        * 100
+
+                    );
+
+                if(
+                    accuracy >
+                    highestAccuracy
+                ){
+
+                    highestAccuracy =
+                        accuracy;
+
+                    strongestCategory =
+                        category;
+
+                }
+
+            }
+        );
+
+    return {
+
+        category:
+            strongestCategory,
+
+        accuracy:
+            highestAccuracy
+
+    };
+
+}
