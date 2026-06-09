@@ -1,0 +1,33 @@
+[33m6e583cc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m seo용 코멘트 수정
+[33mcf74ee4[m Add ads.txt
+[33m019a072[m Add ads.txt
+[33mc0d9dd0[m Add ads.txt
+[33mbf3138a[m 경고 문구
+[33m7cecb6b[m 애드센스 코드
+[33m90dbb04[m 신청 전 라스트 git add .
+[33mbe162f0[m 애드센스 고
+[33m0212d28[m 수정 내용
+[33me215344[m 수정 내용
+[33mb2c9c4b[m 수정 내용
+[33me66a535[m 홈 UI개선
+[33m61a8623[m 문제 수정
+[33mcb525cb[m 약관 최신
+[33m14b09bb[m 수정 내용
+[33mcb1eda4[m Add analytics and SEO meta tags
+[33me5fa738[m Add analytics and SEO meta tags
+[33m3eaecd7[m Create CNAME
+[33m9490087[m Delete CNAME
+[33m0349e41[m Create CNAME
+[33mb1bcb3f[m Delete CNAME
+[33mb07f561[m Create CNAME
+[33ma258fc2[m Delete CNAME
+[33me00ac75[m 수정 내용
+[33mcaf8b45[m 수정 내용
+[33m6d4728b[m 수정 내용
+[33m8e5ec83[m Create CNAME
+[33m95051ae[m 수정 내용
+[33m40e85c0[m gha
+[33m1ce64fa[m 수정 내용
+[33m396ce18[m 홈버튼2
+[33m7afa3d1[m update home button
+[33m6d634f9[m first release
