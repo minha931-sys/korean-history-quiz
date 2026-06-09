@@ -129,42 +129,39 @@ function buildQuizSet(){
 
     }
 
-    const mediumQuestions =
-        sourceQuestions.filter(
-            q =>
-            q.difficulty === "medium"
-        );
+    function buildQuizSet(){
 
-    const hardQuestions =
-        sourceQuestions.filter(
-            q =>
-            q.difficulty === "hard"
-        );
+        const selectedCategory =
+            categorySelect.value;
 
-    const selectedMedium =
-        shuffle(mediumQuestions)
-        .slice(
+        let sourceQuestions =
+            QUESTIONS;
+
+        if(
+            selectedCategory !== "all"
+        ){
+
+            sourceQuestions =
+                QUESTIONS.filter(
+                    q =>
+                    q.category ===
+                selectedCategory
+                );
+
+        }
+
+
+        return shuffle(
+            sourceQuestions
+        ).slice(
             0,
             Math.min(
-                5,
-                mediumQuestions.length
+                10,
+                sourceQuestions.length
             )
         );
 
-    const selectedHard =
-        shuffle(hardQuestions)
-        .slice(
-            0,
-            Math.min(
-                5,
-                hardQuestions.length
-            )
-        );
-
-    return shuffle([
-        ...selectedMedium,
-        ...selectedHard
-    ]);
+    }
 
 }
 
