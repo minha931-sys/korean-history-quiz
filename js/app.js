@@ -2,7 +2,19 @@ const studyWrongBtn =
     document.getElementById(
         "study-wrong-btn"
     );
+const analysisBtn =
+    document.getElementById(
+        "analysis-btn"
+    );
+const analysisScreen =
+    document.getElementById(
+        "analysis-screen"
+    );
 
+const analysisHomeBtn =
+    document.getElementById(
+        "analysis-home-btn"
+    );
 const homeBtn =
     document.getElementById(
         "home-btn"
@@ -89,6 +101,22 @@ const backHomeBtn =
     document.getElementById(
         "back-home-btn"
     );
+analysisHomeBtn.addEventListener(
+    "click",
+    ()=>{
+
+        analysisScreen.classList.remove(
+            "active"
+        );
+
+        homeScreen.classList.add(
+            "active"
+        );
+
+        updateHomeButton();
+
+    }
+);
 
 let selectedQuestions = [];
 
@@ -129,39 +157,15 @@ function buildQuizSet(){
 
     }
 
-    function buildQuizSet(){
-
-        const selectedCategory =
-            categorySelect.value;
-
-        let sourceQuestions =
-            QUESTIONS;
-
-        if(
-            selectedCategory !== "all"
-        ){
-
-            sourceQuestions =
-                QUESTIONS.filter(
-                    q =>
-                    q.category ===
-                selectedCategory
-                );
-
-        }
-
-
-        return shuffle(
-            sourceQuestions
-        ).slice(
-            0,
-            Math.min(
-                10,
-                sourceQuestions.length
-            )
-        );
-
-    }
+    return shuffle(
+        sourceQuestions
+    ).slice(
+        0,
+        Math.min(
+            10,
+            sourceQuestions.length
+        )
+    );
 
 }
 
@@ -239,6 +243,18 @@ function selectAnswer(index){
             "selected"
         );
 
+    updateStreak();
+
+    saveRecentResult(
+        index === correctIndex
+    );
+    saveCategoryResult(
+
+        question.category,
+
+        index === correctIndex
+
+    );
     if(index === correctIndex){
 
         score++;
@@ -595,7 +611,9 @@ function showWrongNote(){
     homeScreen.classList.remove("active");
     resultScreen.classList.remove("active");
     quizScreen.classList.remove("active");
-
+    analysisScreen.classList.remove(
+    "active"
+    );
     wrongNoteScreen.classList.add("active");
 
     const wrongQuestions =
@@ -693,7 +711,10 @@ wrongNoteBtn.addEventListener(
     "click",
     showWrongNote
 );
-
+analysisBtn.addEventListener(
+    "click",
+    showAnalysis
+);
 backHomeBtn.addEventListener(
     "click",
     ()=>{
@@ -791,10 +812,24 @@ studyWrongBtn.addEventListener(
         }
 
         selectedQuestions =
-            wrongQuestions.map(
-                item =>
-                item.question
-            );
+
+            shuffle(
+
+                wrongQuestions.map(
+                    item =>
+                    item.question
+                )
+
+            ).slice(
+
+                0,
+
+            Math.min(
+                10,
+                wrongQuestions.length
+            )
+
+        );
 
         currentQuestionIndex = 0;
 
@@ -861,5 +896,181 @@ function updateHomeButton(){
             "block";
 
     }
+
+}
+function showAnalysis(){
+
+    const totalSolved =
+        getTotalSolvedCount();
+
+    if(totalSolved < 30){
+
+        alert(
+
+`누적 학습량이 30문제 미만이라
+정확한 분석이 어렵습니다.
+
+현재 학습량 : ${totalSolved}문제`
+
+        );
+
+        return;
+
+    }
+
+    homeScreen.classList.remove(
+        "active"
+    );
+
+    quizScreen.classList.remove(
+        "active"
+    );
+
+    resultScreen.classList.remove(
+        "active"
+    );
+
+    wrongNoteScreen.classList.remove(
+        "active"
+    );
+
+    analysisScreen.classList.add(
+        "active"
+    );
+
+    updateHomeButton();
+
+    const stats =
+        getCategoryStats();
+
+    const content =
+        document.getElementById(
+            "analysis-content"
+        );
+
+    const summary =
+        document.getElementById(
+            "analysis-summary"
+        );
+
+    summary.innerHTML =
+
+    `
+    📚 누적 학습량
+
+    <strong>
+    ${totalSolved}문제
+    </strong>
+    `;
+
+    let html = "";
+
+    let weakestCategory =
+        "";
+
+    let lowestAccuracy =
+        101;
+
+    const categories = [
+
+        "고조선·삼국",
+
+        "통일신라·발해",
+
+        "고려",
+
+        "조선",
+
+        "근현대"
+
+    ];
+
+    categories.forEach(
+        category => {
+
+            const data =
+                stats[category];
+
+            if(
+                !data ||
+                data.total === 0
+            ){
+
+                return;
+
+            }
+
+            const accuracy =
+
+                Math.round(
+
+                    data.correct
+                    /
+                    data.total
+                    * 100
+
+                );
+
+            if(
+                accuracy <
+                lowestAccuracy
+            ){
+
+                lowestAccuracy =
+                    accuracy;
+
+                weakestCategory =
+                    category;
+
+            }
+
+            html += `
+
+<div class="analysis-item">
+
+<h3>${category}</h3>
+
+<div class="analysis-rate">
+${accuracy}%
+</div>
+
+<div class="analysis-count">
+(${data.correct} / ${data.total})
+</div>
+
+<div class="analysis-bar">
+
+<div class="analysis-fill"
+     style="width:${accuracy}%">
+</div>
+
+</div>
+
+</div>
+
+`;
+
+        }
+    );
+
+    html += `
+
+<div class="weak-category">
+
+<div class="weak-category-title">
+📉 취약 파트
+</div>
+
+<div class="weak-category-name">
+${weakestCategory}
+: ${lowestAccuracy}%
+</div>
+
+</div>
+
+`;
+
+    content.innerHTML =
+        html;
 
 }

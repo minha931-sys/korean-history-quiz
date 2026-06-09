@@ -66,18 +66,25 @@ gtag('config', 'G-KTT9T9VYDK');
                     <strong id="streak-count">
                         0일
                     </strong>
+                    <p class="stat-guide">
+                     * 연속 학습은 하루 1회 이상 문제를 풀면 반영됩니다.
+                    </p>
 
                 </div>
 
                 <div class="stat-box">
 
                     <span>
-                        📈 최근 컨디션
+                        📈 현재 컨디션
                     </span>
 
                     <strong id="recent-accuracy">
                         -
                     </strong>
+
+                    <p class="stat-guide">
+                        *최근 20문제 정답률이 반영됩니다.
+                    </p>
 
                 </div>
 
@@ -262,6 +269,16 @@ gtag('config', 'G-KTT9T9VYDK');
         <h2>
             📖 오답노트
         </h2>
+        <div class="result-actions">
+
+            <button id="study-wrong-btn"
+                    class="primary-btn">
+
+                📚 틀린 문제만 랜덤으로 풀기
+
+            </button>
+
+        </div>
 
         <div id="wrong-note-list">
         </div>
@@ -270,12 +287,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
             
                     
-            <button id="study-wrong-btn"
-                    class="primary-btn">
+            
 
-                📚 오답문제 풀기
-
-            </button>
             <button id="clear-note-btn"
                     class="secondary-btn">
                 오답노트 초기화
@@ -283,6 +296,41 @@ gtag('config', 'G-KTT9T9VYDK');
             </button>
 
             <button id="back-home-btn"
+                    class="primary-btn">
+
+                홈으로
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="analysis-screen"
+         class="screen">
+
+    <div class="result-card">
+
+        <h2>
+            📊 학습 분석
+        </h2>
+
+        <div id="analysis-summary"
+            class="analysis-summary">
+        </div>
+
+        <p class="analysis-subtitle">
+            시대별 정답률
+        </p>
+
+        <div id="analysis-content">
+        </div>
+
+        <div class="result-actions">
+
+            <button id="analysis-home-btn"
                     class="primary-btn">
 
                 홈으로
