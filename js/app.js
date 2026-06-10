@@ -174,78 +174,35 @@ function shuffleQuestion(question){
 
 }
 
-function buildQuizSet(){
+function buildQuizSet(quizCount, selectedCategory) {
 
-    const selectedCategory =
-        categorySelect.value;
+    const pool =
+        selectedCategory === "all"
+            ? QUESTIONS
+            : QUESTIONS.filter(
+                  q => q.category === selectedCategory
+              );
 
-    let sourceQuestions =
-        QUESTIONS;
-
-    if(
-        selectedCategory !== "all"
-    ){
-
-        sourceQuestions =
-            QUESTIONS.filter(
-                q =>
-                q.category ===
-                selectedCategory
-            );
-
-    }
-
-    const shuffled =
-        shuffle(sourceQuestions);
-
-    const result = [];
-
-    shuffled.forEach(question => {
-
-        if(
-            result.length === 0
-        ){
-
-            result.push(question);
-
-            return;
-
-        }
-
-        const lastQuestion =
-            result[
-                result.length - 1
-            ];
-
-        if(
-            lastQuestion.category !==
-            question.category
-        ){
-
-            result.push(question);
-
-        }
-
-    });
-
-    return result
-        .slice(
-            0,
-            Math.min(
-                10,
-                result.length
-            )
-        )
-        .map(
-            shuffleQuestion
-        );
+    return [...pool]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, quizCount);
 
 }
 
 function startQuiz(){
 
+    const selectedCategory =
+        categorySelect.value;
+
+    const quizCount = 10;
+
     selectedQuestions =
-        buildQuizSet();
+        buildQuizSet(
+            quizCount,
+            selectedCategory
+        ).map(
+            shuffleQuestion
+        );
 
     currentQuestionIndex = 0;
 
@@ -1034,7 +991,10 @@ function showAnalysis(){
         );
 
     const strongest =
-        getStrongestCategory();
+        getStrongestCategory() || {
+            category: "데이터 없음",
+            accuracy: 0
+        };
 
     let html = "";
 
