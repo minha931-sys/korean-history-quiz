@@ -2,6 +2,10 @@ const studyWrongBtn =
     document.getElementById(
         "study-wrong-btn"
     );
+const timelineBtn =
+    document.getElementById(
+        "timeline-btn"
+    );
 const analysisBtn =
     document.getElementById(
         "analysis-btn"
@@ -470,6 +474,15 @@ function getGrade(score){
     return "📖 역사 입문자";
 
 }
+timelineBtn.addEventListener(
+    "click",
+    ()=>{
+
+        location.href =
+            "pages/timeline.html";
+
+    }
+);
 
 function showResult(){
     if(isRetryMode){
