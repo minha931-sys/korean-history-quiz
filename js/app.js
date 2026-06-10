@@ -135,6 +135,44 @@ function shuffle(array){
     );
 
 }
+function shuffleQuestion(question){
+
+    const choices =
+        [...question.choices];
+
+    const correctAnswer =
+        choices[question.answer];
+
+    for(
+        let i = choices.length - 1;
+        i > 0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [choices[i], choices[j]] =
+        [choices[j], choices[i]];
+
+    }
+
+    return {
+
+        ...question,
+
+        choices,
+
+        answer:
+            choices.indexOf(
+                correctAnswer
+            )
+
+    };
+
+}
 
 function buildQuizSet(){
 
@@ -159,12 +197,16 @@ function buildQuizSet(){
 
     return shuffle(
         sourceQuestions
-    ).slice(
+    )
+    .slice(
         0,
         Math.min(
             10,
             sourceQuestions.length
         )
+    )
+    .map(
+        shuffleQuestion
     );
 
 }
@@ -771,7 +813,9 @@ retryWrongBtn.addEventListener(
         }
 
         selectedQuestions =
-            [...wrongQuestionsThisRound];
+            wrongQuestionsThisRound.map(
+                shuffleQuestion
+            );
 
         currentQuestionIndex = 0;
 
@@ -820,16 +864,17 @@ studyWrongBtn.addEventListener(
                     item.question
                 )
 
-            ).slice(
-
-                0,
-
-            Math.min(
-                10,
-                wrongQuestions.length
             )
-
-        );
+            .slice(
+                0,
+                Math.min(
+                    10,
+                    wrongQuestions.length
+                )
+            )
+            .map(
+                shuffleQuestion
+            );
 
         currentQuestionIndex = 0;
 
