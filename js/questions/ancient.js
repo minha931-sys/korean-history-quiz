@@ -145,7 +145,7 @@ const ANCIENT_QUESTIONS = [
     category:"고조선·삼국",
     difficulty:"medium",
 
-    question:"신라가 삼국 통일의 기반을 마련하는 데 크게 기여한 왕은?",
+    question:"한강 유역을 확보하여 신라의 삼국 통일 기반을 마련한 왕은?",
 
     choices:[
         "진흥왕",
@@ -157,7 +157,7 @@ const ANCIENT_QUESTIONS = [
     answer:0,
 
     explanation:
-    "진흥왕은 화랑도를 정비하고 영토를 확장하였다."
+    "진흥왕은 한강 유역을 확보하고 영토를 크게 확장하여 신라 발전의 기반을 마련하였다."
 },
 
 {
@@ -285,37 +285,38 @@ const ANCIENT_QUESTIONS = [
     category:"고조선·삼국",
     difficulty:"hard",
 
-    question:"다음 중 삼국 시대의 사실로 옳은 것은?",
+    question:"다음 중 백제에 대한 설명으로 옳은 것은?",
 
     choices:[
-        "백제는 일본에 문화 전파에 영향을 주었다.",
-        "고구려는 한글을 창제하였다.",
-        "신라는 개경을 수도로 삼았다.",
-        "가야가 삼국을 통일하였다."
+        "일본에 불교와 선진 문화를 전파하는 데 영향을 주었다.",
+        "태학을 설립하여 유학 교육을 실시하였다.",
+        "화랑도를 통해 인재를 양성하였다.",
+        "천리장성을 축조하였다."
     ],
 
     answer:0,
 
     explanation:
-    "백제는 일본에 불교와 문화를 전파하는 데 영향을 주었다."
+    "백제는 일본에 불교와 선진 기술, 문화를 전파하는 데 중요한 역할을 하였다."
 },
 {
-    id: 5001,
-    category: "고조선·삼국",
-    difficulty: "easy",
+    id:5001,
+    category:"고조선·삼국",
+    difficulty:"easy",
 
-    question: "다음 국가를 건국한 인물은?\n- 단군왕검",
+    question:"다음 설명에 해당하는 국가는?\n- 단군왕검이 건국한 것으로 전해진다.",
 
-    choices: [
+    choices:[
         "고조선",
         "고구려",
         "백제",
         "신라"
     ],
 
-    answer: 0,
+    answer:0,
 
-    explanation: "고조선은 단군왕검이 건국하였다고 전해진다."
+    explanation:
+    "고조선은 단군왕검이 건국하였다고 전해진다."
 },
 {
     id: 5002,
@@ -408,22 +409,23 @@ const ANCIENT_QUESTIONS = [
     explanation: "을지문덕이 살수대첩에서 수나라 군대를 격파하였다."
 },
 {
-    id: 5007,
-    category: "고조선·삼국",
-    difficulty: "medium",
+    id:5007,
+    category:"고조선·삼국",
+    difficulty:"medium",
 
-    question: "다음 인물과 관련된 업적으로 옳은 것은?\n- 장수왕",
+    question:"다음 설명에 해당하는 왕의 업적으로 옳은 것은?\n- 광개토대왕의 뒤를 이어 고구려의 전성기를 이끌었다.",
 
-    choices: [
+    choices:[
         "평양 천도",
-        "훈민정음 창제",
-        "과거제 실시",
-        "골품제 정비"
+        "사비 천도",
+        "한강 유역 확보",
+        "화백회의 정비"
     ],
 
-    answer: 0,
+    answer:0,
 
-    explanation: "장수왕은 국내성에서 평양으로 천도하였다."
+    explanation:
+    "장수왕은 국내성에서 평양으로 천도하고 남진 정책을 추진하였다."
 },
 {
     id: 5008,
@@ -462,22 +464,23 @@ const ANCIENT_QUESTIONS = [
     explanation: "신라는 당과 연합하여 백제와 고구려를 멸망시켰다."
 },
 {
-    id: 5010,
-    category: "고조선·삼국",
-    difficulty: "medium",
+    id:5010,
+    category:"고조선·삼국",
+    difficulty:"medium",
 
-    question: "고조선의 법으로 전해지는 내용은?",
+    question:"고조선의 8조법 내용을 통해 알 수 있는 사회 모습으로 가장 적절한 것은?",
 
-    choices: [
-        "8조법",
-        "경국대전",
-        "속대전",
-        "대전회통"
+    choices:[
+        "사유 재산을 중시하였다.",
+        "신분 차별이 없었다.",
+        "불교가 널리 퍼졌다.",
+        "과거제를 시행하였다."
     ],
 
-    answer: 0,
+    answer:0,
 
-    explanation: "고조선에는 8조법이 있었다고 전해진다."
+    explanation:
+    "8조법에는 절도와 관련된 내용이 있어 사유 재산을 중요하게 여겼음을 알 수 있다."
 },
 {
     id: 5011,
@@ -552,22 +555,23 @@ const ANCIENT_QUESTIONS = [
     explanation: "불교는 고구려, 백제, 신라 순으로 수용되었다."
 },
 {
-    id: 5015,
-    category: "고조선·삼국",
-    difficulty: "hard",
+    id:5015,
+    category:"고조선·삼국",
+    difficulty:"hard",
 
-    question: "진흥왕의 업적으로 옳은 것은?",
+    question:"진흥왕의 업적으로 옳은 것은?",
 
-    choices: [
+    choices:[
         "한강 유역 확보",
-        "훈민정음 창제",
-        "과거제 실시",
-        "삼국 통일"
+        "사비 천도",
+        "관산성 전투 전사",
+        "태학 설립"
     ],
 
-    answer: 0,
+    answer:0,
 
-    explanation: "진흥왕은 한강 유역을 차지하며 신라 전성기를 열었다."
+    explanation:
+    "진흥왕은 한강 유역을 확보하고 신라의 영토를 크게 확장하였다."
 },
 {
     id: 5016,
@@ -794,18 +798,23 @@ explanation: "율령은 중앙집권 국가 운영의 기준을 마련하고 왕
 },
 
 {
-id: 5030,
-category: "고조선·삼국",
-difficulty: "hard",
-question: "삼국이 불교를 수용한 공통 배경은?",
-choices: [
-"왕권 강화와 사상적 통합",
-"상업 발전",
-"해외 무역 확대",
-"신분제 철폐"
-],
-answer: 0,
-explanation: "불교는 왕권 강화와 국가 통합을 위한 사상적 기반으로 활용되었다."
+    id:5030,
+    category:"고조선·삼국",
+    difficulty:"hard",
+
+    question:"삼국 시대에 불교가 국가적으로 수용된 이후 나타난 변화로 가장 적절한 것은?",
+
+    choices:[
+        "왕권 강화와 국가 통합에 활용되었다.",
+        "신분제가 폐지되었다.",
+        "과거제가 시행되었다.",
+        "귀족 세력이 완전히 사라졌다."
+    ],
+
+    answer:0,
+
+    explanation:
+    "불교는 왕권 강화와 중앙집권 체제 확립을 위한 사상적 기반으로 활용되었다."
 },{
 id: 5031,
 category: "고조선·삼국",
@@ -821,20 +830,6 @@ answer: 0,
 explanation: "고구려는 수나라 멸망 이후 강성해진 당나라의 군사적 위협에 대응하기 위해 천리장성을 축조하였다."
 },
 
-{
-id: 5032,
-category: "고조선·삼국",
-difficulty: "hard",
-question: "백제가 일본에 끼친 영향으로 가장 적절한 것은?",
-choices: [
-"불교와 선진 문화 전파",
-"훈민정음 전파",
-"성리학 전파",
-"과거제 전파"
-],
-answer: 0,
-explanation: "백제는 일본에 불교와 한자 문화, 기술 등을 전달하여 일본 고대 문화 발전에 영향을 주었다."
-},
 
 {
 id: 5033,
