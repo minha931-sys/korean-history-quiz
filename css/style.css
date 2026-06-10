@@ -296,6 +296,10 @@ h1{
 
 @media(max-width:768px){
 
+    .site-description{
+
+        display:none;
+    }
     .container{
 
         padding:12px;
