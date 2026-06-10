@@ -45,19 +45,18 @@ const UNIFIED_QUESTIONS = [
     category:"통일신라·발해",
     difficulty:"medium",
 
-    question:"통일 신라 시대의 대표적인 천문 관측 시설은?",
+    question:"다음 문화유산이 만들어진 국가는?\n- 첨성대",
 
     choices:[
-        "첨성대",
-        "황룡사",
-        "석굴암",
-        "불국사"
+        "신라",
+        "고구려",
+        "백제",
+        "발해"
     ],
 
     answer:0,
 
-    explanation:
-    "첨성대는 동양에서 가장 오래된 천문 관측대 중 하나이다."
+    explanation:"첨성대는 신라의 대표적인 천문 관측 시설이다."
 },
 
 {
@@ -200,22 +199,22 @@ const UNIFIED_QUESTIONS = [
     "원효는 불교 사상을 널리 알리는 데 기여하였다."
 },
 {
-    id: 6001,
-    category: "통일신라·발해",
-    difficulty: "easy",
+    id:6001,
+    category:"통일신라·발해",
+    difficulty:"easy",
 
-    question: "발해를 건국한 인물은?",
+    question:"다음 설명에 해당하는 국가는?\n- 고구려 유민과 말갈 세력이 건국하였다.\n- 남북국 시대 북쪽을 대표하였다.",
 
-    choices: [
-        "문무왕",
-        "대조영",
-        "궁예",
-        "왕건"
+    choices:[
+        "발해",
+        "고려",
+        "후백제",
+        "가야"
     ],
 
-    answer: 1,
+    answer:0,
 
-    explanation: "대조영은 고구려 유민과 말갈 세력을 이끌고 발해를 건국하였다."
+    explanation:"발해는 대조영이 건국한 국가로 남북국 시대를 이끌었다."
 },
 {
     id: 6002,
@@ -470,22 +469,22 @@ const UNIFIED_QUESTIONS = [
     explanation: "사회 혼란 속에서 후삼국이 성립되었다."
 },
 {
-    id: 6016,
-    category: "통일신라·발해",
-    difficulty: "hard",
+    id:6016,
+    category:"통일신라·발해",
+    difficulty:"hard",
 
-    question: "발해의 5경 체제 운영 목적은?",
+    question:"발해의 5경 체제에 대한 설명으로 옳은 것은?",
 
-    choices: [
-        "효율적 영토 통치",
-        "불교 탄압",
-        "왕권 약화",
-        "무역 축소"
+    choices:[
+        "여러 지역에 행정 중심지를 두었다.",
+        "불교 사찰을 관리하기 위한 제도였다.",
+        "군사 조직의 명칭이었다.",
+        "신라의 화백회의를 계승하였다."
     ],
 
-    answer: 0,
+    answer:0,
 
-    explanation: "넓은 영토를 효과적으로 통치하기 위해 5경 체제를 운영하였다."
+    explanation:"발해는 넓은 영토를 효율적으로 통치하기 위해 5경 체제를 운영하였다."
 },
 {
     id: 6017,
@@ -559,23 +558,22 @@ const UNIFIED_QUESTIONS = [
 
     explanation: "선왕 때 발해는 최대 전성기를 맞이하였다."
 },{
-id: 6021,
-category: "통일신라·발해",
-difficulty: "hard",
+    id:6021,
+    category:"통일신라·발해",
+    difficulty:"hard",
 
-question: "신문왕이 추진한 정책의 공통 목적은?",
+    question:"신문왕이 폐지한 제도로 옳은 것은?",
 
-choices: [
-    "왕권 강화",
-    "불교 억압",
-    "대외 무역 확대",
-    "귀족 연합 정치 강화"
-],
+    choices:[
+        "녹읍",
+        "관료전",
+        "독서삼품과",
+        "9주 5소경"
+    ],
 
-answer: 0,
+    answer:0,
 
-explanation: "신문왕은 김흠돌의 난을 진압하고 관료전을 지급하는 등 귀족 세력을 견제하며 왕권 강화를 추진하였다."
-
+    explanation:"신문왕은 귀족 세력을 약화시키기 위해 녹읍을 폐지하였다."
 },
 
 {
@@ -719,23 +717,22 @@ explanation: "대조영은 고구려 유민과 말갈 세력을 기반으로 발
 },
 
 {
-id: 6029,
-category: "통일신라·발해",
-difficulty: "hard",
+    id:6029,
+    category:"통일신라·발해",
+    difficulty:"hard",
 
-question: "발해가 '해동성국'이라 불리게 된 이유는?",
+    question:"발해 선왕 시기의 특징으로 가장 적절한 것은?",
 
-choices: [
-    "전성기에 강력한 국력을 갖추었기 때문",
-    "신라를 정복했기 때문",
-    "왜를 정복했기 때문",
-    "고려를 건국했기 때문"
-],
+    choices:[
+        "영토를 크게 확장하였다.",
+        "발해를 건국하였다.",
+        "후삼국을 통일하였다.",
+        "독서삼품과를 실시하였다."
+    ],
 
-answer: 0,
+    answer:0,
 
-explanation: "선왕 시기 발해는 영토를 크게 확장하고 국력이 강성해져 해동성국이라 불렸다."
-
+    explanation:"선왕은 영토를 확장하여 발해의 전성기를 이끌었다."
 },
 
 {
@@ -879,23 +876,22 @@ explanation: "최치원은 시무 10여 조를 통해 통일신라의 사회 모
 },
 
 {
-id: 6037,
-category: "통일신라·발해",
-difficulty: "hard",
+    id:6037,
+    category:"통일신라·발해",
+    difficulty:"hard",
 
-question: "발해 멸망의 직접적인 원인은?",
+    question:"발해를 멸망시킨 민족은?",
 
-choices: [
-    "거란의 침입",
-    "몽골의 침입",
-    "왜구의 침입",
-    "신라의 공격"
-],
+    choices:[
+        "거란",
+        "여진",
+        "몽골",
+        "왜"
+    ],
 
-answer: 0,
+    answer:0,
 
-explanation: "926년 발해는 거란의 침입을 받아 멸망하였다."
-
+    explanation:"926년 거란이 발해를 공격하여 멸망시켰다."
 },
 
 {
@@ -919,23 +915,22 @@ explanation: "발해 유민들은 고려로 이주하였고 고려는 발해를 
 },
 
 {
-id: 6039,
-category: "통일신라·발해",
-difficulty: "hard",
+    id:6039,
+    category:"통일신라·발해",
+    difficulty:"hard",
 
-question: "통일신라와 발해의 공통점으로 가장 적절한 것은?",
+    question:"남북국 시대의 특징으로 가장 적절한 것은?",
 
-choices: [
-    "당 문화를 적극 수용하였다.",
-    "과거제를 실시하였다.",
-    "훈민정음을 사용하였다.",
-    "성리학을 국가 이념으로 삼았다."
-],
+    choices:[
+        "통일신라와 발해가 공존하였다.",
+        "고려가 후삼국을 통일하였다.",
+        "조선이 건국되었다.",
+        "삼국이 경쟁하였다."
+    ],
 
-answer: 0,
+    answer:0,
 
-explanation: "통일신라와 발해는 모두 당의 제도와 문화를 수용하여 국가 체제를 발전시켰다."
-
+    explanation:"남북국 시대에는 남쪽의 통일신라와 북쪽의 발해가 공존하였다."
 },
 
 {

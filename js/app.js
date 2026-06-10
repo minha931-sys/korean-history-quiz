@@ -195,19 +195,50 @@ function buildQuizSet(){
 
     }
 
-    return shuffle(
-        sourceQuestions
-    )
-    .slice(
-        0,
-        Math.min(
-            10,
-            sourceQuestions.length
+    const shuffled =
+        shuffle(sourceQuestions);
+
+    const result = [];
+
+    shuffled.forEach(question => {
+
+        if(
+            result.length === 0
+        ){
+
+            result.push(question);
+
+            return;
+
+        }
+
+        const lastQuestion =
+            result[
+                result.length - 1
+            ];
+
+        if(
+            lastQuestion.category !==
+            question.category
+        ){
+
+            result.push(question);
+
+        }
+
+    });
+
+    return result
+        .slice(
+            0,
+            Math.min(
+                10,
+                result.length
+            )
         )
-    )
-    .map(
-        shuffleQuestion
-    );
+        .map(
+            shuffleQuestion
+        );
 
 }
 
