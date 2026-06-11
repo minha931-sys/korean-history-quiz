@@ -250,6 +250,30 @@
 
 @media(max-width:768px){
 
+    .quiz-header{
+
+        position:relative;
+
+        justify-content:flex-end;
+
+        min-height:46px;
+
+    }
+
+    #question-number{
+
+        position:absolute;
+
+        left:50%;
+
+        transform:translateX(-50%);
+
+        width:max-content;
+
+        text-align:center;
+
+    }
+
     .question-box{
 
         padding:20px;
