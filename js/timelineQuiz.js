@@ -20,6 +20,14 @@ let currentQuestion;
 let currentChoices = [];
 let nextQuestionTimeoutId = null;
 
+function formatTimelineYear(year){
+
+    return /^\d+$/.test(year)
+        ? `${year}년`
+        : year;
+
+}
+
 function getRandomQuestion(){
 
     const answer =
@@ -67,7 +75,7 @@ function getRandomQuestion(){
 
         <h2>
 
-            ${answer.year}년
+            ${formatTimelineYear(answer.year)}
 
         </h2>
 

@@ -662,6 +662,14 @@ const tabs =
         ".timeline-tab"
     );
 
+function formatTimelineYear(year){
+
+    return /^\d+$/.test(year)
+        ? `${year}년`
+        : year;
+
+}
+
 function showTimeline(category){
 
     const events =
@@ -683,7 +691,7 @@ function showTimeline(category){
 
             <div class="timeline-year">
 
-                ${item.year}년
+                ${formatTimelineYear(item.year)}
 
             </div>
 

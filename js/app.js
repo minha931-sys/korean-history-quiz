@@ -658,6 +658,7 @@ function showWrongNote(){
     "active"
     );
     wrongNoteScreen.classList.add("active");
+    updateHomeButton();
 
     const wrongQuestions =
         getWrongQuestions();
@@ -670,11 +671,10 @@ function showWrongNote(){
             저장된 오답이 없습니다.
         </p>
         `;
-        
+
         return;
 
     }
-    updateHomeButton();
 
     wrongNoteList.innerHTML =
 
