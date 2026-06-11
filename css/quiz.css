@@ -390,6 +390,32 @@
     position:relative;
 
 }
+
+.timeline-page-card{
+
+    position:relative;
+
+}
+
+.timeline-home-btn{
+
+    top:20px;
+
+    left:20px;
+
+}
+
+@media (max-width:768px){
+
+    .timeline-home-btn{
+
+        top:12px;
+
+        left:12px;
+
+    }
+
+}
 .site-footer{
 
     margin-top:40px;

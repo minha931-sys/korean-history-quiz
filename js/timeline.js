@@ -27,6 +27,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"373",
+        event:"고구려 - 율령 반포",
+        description:"소수림왕이 국가 통치 질서를 정비하기 위해 율령을 반포하였다."
+    },
+
+    {
         year:"372",
         event:"고구려 - 불교 수용",
         description:"소수림왕이 불교를 공인하였다."
@@ -36,6 +42,12 @@ window.TIMELINE = {
         year:"384",
         event:"백제 - 불교 수용",
         description:"침류왕이 불교를 받아들였다."
+    },
+
+    {
+        year:"392",
+        event:"고구려 - 광개토대왕 즉위",
+        description:"광개토대왕이 즉위하여 정복 활동을 본격적으로 전개하였다."
     },
 
     {
@@ -75,9 +87,21 @@ window.TIMELINE = {
     },
 
     {
+        year:"553",
+        event:"신라 - 한강 상류 차지",
+        description:"진흥왕이 한강 유역 전체를 장악하여 세력을 크게 넓혔다."
+    },
+
+    {
         year:"562",
         event:"신라 - 대가야 정복",
         description:"진흥왕이 대가야를 병합하였다."
+    },
+
+    {
+        year:"598",
+        event:"고구려 - 수 문제의 침입 격퇴",
+        description:"고구려가 수나라의 1차 침입을 물리쳤다."
     },
 
     {
@@ -93,9 +117,21 @@ window.TIMELINE = {
     },
 
     {
+        year:"663",
+        event:"백제 부흥 운동 - 백강 전투",
+        description:"백제 부흥군이 왜군과 함께 당·신라 연합군에 맞섰으나 패배하였다."
+    },
+
+    {
         year:"668",
         event:"고구려 - 멸망",
         description:"신라와 당의 연합군에 의해 멸망하였다."
+    },
+
+    {
+        year:"676",
+        event:"신라 - 매소성·기벌포 전투 승리",
+        description:"신라가 당 세력을 몰아내며 삼국 통일 완성의 기반을 마련하였다."
     }
 
 ],
@@ -118,6 +154,12 @@ window.TIMELINE = {
         year:"689",
         event:"신라 - 관료전 지급",
         description:"신문왕이 귀족 세력을 약화시키기 위해 시행하였다."
+    },
+
+    {
+        year:"757",
+        event:"신라 - 녹읍 부활",
+        description:"귀족 세력이 다시 강화되면서 녹읍이 부활하였다."
     },
 
     {
@@ -157,15 +199,33 @@ window.TIMELINE = {
     },
 
     {
+        year:"788",
+        event:"신라 - 독서삼품과 실시",
+        description:"원성이 유교 경전 이해 수준에 따라 인재를 선발하고자 하였다."
+    },
+
+    {
         year:"828",
         event:"신라 - 청해진 설치",
         description:"장보고가 해상 무역 기지인 청해진을 설치하였다."
     },
 
     {
+        year:"851",
+        event:"장보고 - 청해진 장악 기반 상실",
+        description:"장보고 사후 청해진 세력이 약화되며 신라 해상 통제력도 흔들렸다."
+    },
+
+    {
         year:"889",
         event:"신라 - 원종과 애노의 난",
         description:"농민 봉기가 발생하며 신라 사회가 흔들리기 시작하였다."
+    },
+
+    {
+        year:"892",
+        event:"후백제 - 견훤, 완산주 점거",
+        description:"견훤이 완산주를 중심으로 세력을 키우며 후백제 건국 기반을 다졌다."
     },
 
     {
@@ -202,6 +262,12 @@ window.TIMELINE = {
         year:"918",
         event:"고려 - 건국",
         description:"왕건이 궁예를 몰아내고 고려를 건국하였다."
+    },
+
+    {
+        year:"935",
+        event:"후백제 - 신검의 정변",
+        description:"견훤의 아들 신검이 정변을 일으켜 후백제 내부 분열이 심화되었다."
     },
 
     {
@@ -257,6 +323,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"976",
+        event:"고려 - 전시과 실시",
+        description:"경종이 관리에게 토지를 지급하는 전시과 제도를 마련하였다."
+    },
+
+    {
         year:"981",
         event:"고려 - 시무 28조",
         description:"최승로가 성종에게 개혁안을 제시하였다."
@@ -266,6 +338,12 @@ window.TIMELINE = {
         year:"993",
         event:"고려 - 서희의 담판",
         description:"거란과 외교 협상을 통해 강동 6주를 확보하였다."
+    },
+
+    {
+        year:"1009",
+        event:"고려 - 강조의 정변",
+        description:"강조가 목종을 폐위하고 현종을 옹립하였다."
     },
 
     {
@@ -281,9 +359,21 @@ window.TIMELINE = {
     },
 
     {
+        year:"1033",
+        event:"고려 - 천리장성 축조 시작",
+        description:"북방 방어를 강화하기 위해 압록강 하류에서 도련포까지 장성을 쌓기 시작하였다."
+    },
+
+    {
         year:"1107",
         event:"고려 - 동북 9성 축조",
         description:"윤관이 여진을 정벌하였다."
+    },
+
+    {
+        year:"1136",
+        event:"고려 - 『삼국사기』 편찬",
+        description:"김부식 등이 유교적 관점에서 우리 역사를 정리하였다."
     },
 
     {
@@ -323,6 +413,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"1258",
+        event:"고려 - 최씨 무신 정권 붕괴",
+        description:"최의가 제거되며 오랜 무신 집권 체제가 막을 내렸다."
+    },
+
+    {
         year:"1270",
         event:"고려 - 삼별초 항쟁",
         description:"대몽 항쟁을 계속하였다."
@@ -332,6 +428,12 @@ window.TIMELINE = {
         year:"1356",
         event:"고려 - 공민왕 개혁",
         description:"반원 자주 정책과 개혁 정치를 추진하였다."
+    },
+
+    {
+        year:"1362",
+        event:"고려 - 홍건적 격퇴",
+        description:"공민왕 때 홍건적의 침입을 물리치며 왕권 회복의 계기를 마련하였다."
     },
 
     {
@@ -375,6 +477,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"1420",
+        event:"조선 - 집현전 설치",
+        description:"세종이 학문 연구와 정책 자문을 위해 집현전을 두었다."
+    },
+
+    {
         year:"1443",
         event:"조선 - 훈민정음 창제",
         description:"세종이 훈민정음을 창제하였다."
@@ -399,9 +507,21 @@ window.TIMELINE = {
     },
 
     {
+        year:"1498",
+        event:"조선 - 무오사화",
+        description:"김종직의 조의제문이 문제 되어 사림이 큰 피해를 입었다."
+    },
+
+    {
         year:"1519",
         event:"조선 - 기묘사화",
         description:"조광조 등 사림이 제거되었다."
+    },
+
+    {
+        year:"1545",
+        event:"조선 - 을사사화",
+        description:"외척 간 권력 다툼 속에서 사림이 다시 큰 피해를 입었다."
     },
 
     {
@@ -414,6 +534,12 @@ window.TIMELINE = {
         year:"1597",
         event:"조선 - 정유재란",
         description:"일본이 다시 침략하였다."
+    },
+
+    {
+        year:"1608",
+        event:"조선 - 영정법 시행",
+        description:"광해군 때 토지 1결당 쌀 4두를 거두는 제도가 실시되었다."
     },
 
     {
@@ -435,6 +561,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"1675",
+        event:"조선 - 예송 논쟁 본격화",
+        description:"상복 기간 문제를 둘러싸고 서인과 남인의 대립이 심화되었다."
+    },
+
+    {
         year:"1653",
         event:"조선 - 하멜 표류",
         description:"하멜이 제주도에 표착하였다."
@@ -444,6 +576,12 @@ window.TIMELINE = {
         year:"1776",
         event:"조선 - 정조 즉위",
         description:"정조가 즉위하여 개혁 정치를 추진하였다."
+    },
+
+    {
+        year:"1800",
+        event:"조선 - 정조 사망",
+        description:"정조 사후 왕권이 약화되며 세도 정치로 이어질 기반이 형성되었다."
     },
 
     {
@@ -553,6 +691,12 @@ window.TIMELINE = {
     },
 
     {
+        year:"1906",
+        event:"통감부 설치",
+        description:"일본이 대한제국의 내정과 외교를 통제하기 위해 통감부를 설치하였다."
+    },
+
+    {
         year:"1907",
         event:"대한제국 - 헤이그 특사 파견",
         description:"고종이 만국평화회의에 특사를 파견하였다."
@@ -562,6 +706,12 @@ window.TIMELINE = {
         year:"1907",
         event:"대한제국 - 군대 해산",
         description:"대한제국 군대가 강제로 해산되었다."
+    },
+
+    {
+        year:"1909",
+        event:"안중근 - 하얼빈 의거",
+        description:"안중근이 하얼빈에서 이토 히로부미를 처단하였다."
     },
 
     {
@@ -584,6 +734,12 @@ window.TIMELINE = {
 
     {
         year:"1920",
+        event:"일제강점기 - 간도참변",
+        description:"일본군이 만주의 한인 사회를 무력으로 탄압하였다."
+    },
+
+    {
+        year:"1920",
         event:"독립군 - 봉오동 전투",
         description:"홍범도가 일본군을 격파하였다."
     },
@@ -601,15 +757,33 @@ window.TIMELINE = {
     },
 
     {
+        year:"1927",
+        event:"일제강점기 - 신간회 창립",
+        description:"민족주의와 사회주의 계열이 연합하여 항일 운동을 전개하였다."
+    },
+
+    {
         year:"1929",
         event:"일제강점기 - 광주학생항일운동",
         description:"전국적인 학생 항일 운동으로 확대되었다."
     },
 
     {
+        year:"1931",
+        event:"일제강점기 - 만주사변",
+        description:"일본이 만주를 침략하며 대륙 침략을 본격화하였다."
+    },
+
+    {
         year:"1940",
         event:"대한민국 임시정부 - 한국광복군 창설",
         description:"독립 전쟁 수행을 위한 군대가 조직되었다."
+    },
+
+    {
+        year:"1942",
+        event:"조선어학회 사건",
+        description:"일제가 민족 문화 말살 정책 속에서 조선어학회 관계자들을 탄압하였다."
     },
 
     {
@@ -622,6 +796,12 @@ window.TIMELINE = {
         year:"1948",
         event:"대한민국 정부 수립",
         description:"대한민국 정부가 수립되었다."
+    },
+
+    {
+        year:"1953",
+        event:"6·25 전쟁 - 정전 협정 체결",
+        description:"한국전쟁의 전투 행위가 중단되고 휴전 체제가 성립되었다."
     },
 
     {
@@ -646,6 +826,12 @@ window.TIMELINE = {
         year:"1987",
         event:"6월 민주 항쟁",
         description:"대통령 직선제 개헌을 이끌어냈다."
+    },
+
+    {
+        year:"1988",
+        event:"서울 올림픽 개최",
+        description:"대한민국의 국제적 위상이 높아지고 사회 변화가 가속화되었다."
     }
 
 ]
