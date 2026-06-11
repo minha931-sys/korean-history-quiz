@@ -1,4 +1,4 @@
-const TIMELINE = {
+window.TIMELINE = {
 
     "고조선·삼국":[
 
@@ -714,8 +714,12 @@ function showTimeline(category){
 
     html += `</div>`;
 
+    if(content){
+
     content.innerHTML =
         html;
+
+}
 
 }
 
@@ -745,6 +749,10 @@ tabs.forEach(tab => {
 
 });
 
-showTimeline(
-    "고조선·삼국"
-);
+if(content){
+
+    showTimeline(
+        "고조선·삼국"
+    );
+
+}
