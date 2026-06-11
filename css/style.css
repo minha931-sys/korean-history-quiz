@@ -6,8 +6,8 @@
 
 :root{
 
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
+    --primary:#1f5fcc;
+    --primary-dark:#18489b;
 
     --success:#16a34a;
     --danger:#dc2626;
@@ -18,7 +18,7 @@
 
     --text:#111827;
 
-    --subtext:#6b7280;
+    --subtext:#667085;
 
 }
 
@@ -29,7 +29,22 @@ body{
     "Noto Sans KR",
     sans-serif;
 
-    background:var(--background);
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(255,232,188,.38),
+        transparent 26%
+    ),
+    radial-gradient(
+        circle at top right,
+        rgba(191,219,254,.45),
+        transparent 30%
+    ),
+    linear-gradient(
+        180deg,
+        #fbfcfe 0%,
+        var(--background) 100%
+    );
 
     color:var(--text);
 
@@ -69,6 +84,8 @@ body{
 
     background:var(--card);
 
+    border:1px solid #e7ebf2;
+
     border-radius:24px;
 
     padding:40px;
@@ -76,7 +93,7 @@ body{
     margin-top:20px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+    0 18px 45px rgba(15,23,42,.08);
 
 }
 
@@ -96,7 +113,9 @@ h1{
 
     text-align:center;
 
-    font-size:2.2rem;
+    font-size:2.35rem;
+
+    letter-spacing:-0.03em;
 
     margin-bottom:10px;
 
@@ -108,7 +127,11 @@ h1{
 
     color:var(--subtext);
 
-    margin-bottom:30px;
+    margin-bottom:26px;
+
+    font-size:1.02rem;
+
+    line-height:1.7;
 
 }
 
@@ -134,13 +157,22 @@ h1{
 
 .stat-box{
 
-    background:#f3f4f6;
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fafc
+    );
 
-    padding:20px;
+    border:1px solid #e5e7eb;
+
+    padding:18px 16px;
 
     border-radius:16px;
 
     text-align:center;
+
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9);
 
 }
 
@@ -168,7 +200,7 @@ h1{
 
     border:none;
 
-    border-radius:16px;
+    border-radius:18px;
 
     padding:18px;
 
@@ -200,7 +232,7 @@ h1{
 
     border:none;
 
-    border-radius:16px;
+    border-radius:18px;
 
     padding:18px;
 
@@ -324,7 +356,7 @@ h1{
 
     h1{
 
-        font-size:1.8rem;
+        font-size:1.95rem;
 
     }
 
@@ -388,6 +420,12 @@ h1{
         margin-bottom:18px;
 
         padding:16px 14px;
+
+    }
+
+    .primary-action-section .category-select-box{
+
+        margin-bottom:14px;
 
     }
 
@@ -515,16 +553,44 @@ h1{
 
     padding:24px;
 
-    border-radius:20px;
+    border-radius:24px;
 
     background:
     linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fbff
+        145deg,
+        #4f86dc,
+        #7ea7ea
     );
 
-    border:1px solid #dbeafe;
+    border:1px solid #6f9be0;
+
+    color:white;
+
+    box-shadow:
+    0 14px 24px rgba(79,134,220,.16);
+
+}
+
+.primary-action-section .category-select-box{
+
+    margin-bottom:16px;
+
+}
+
+.primary-action-section .category-select-box label{
+
+    text-align:left;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.primary-action-section #category-select{
+
+    border:none;
+
+    box-shadow:
+    0 8px 20px rgba(15,23,42,.12);
 
 }
 
@@ -532,13 +598,13 @@ h1{
 
     margin-bottom:10px;
 
-    color:var(--primary);
+    color:rgba(255,245,210,.95);
 
-    font-size:.9rem;
+    font-size:.82rem;
 
     font-weight:800;
 
-    letter-spacing:.02em;
+    letter-spacing:.08em;
 
     text-transform:uppercase;
 
@@ -550,7 +616,7 @@ h1{
 
     margin-bottom:0 !important;
 
-    color:var(--subtext);
+    color:rgba(255,255,255,.82);
 
     font-size:.95rem;
 
@@ -568,9 +634,17 @@ h1{
 
     border-radius:20px;
 
-    background:#f9fafb;
+    background:
+    linear-gradient(
+        180deg,
+        #fffdf8,
+        #fffaf0
+    );
 
-    border:1px solid #e5e7eb;
+    border:1px solid #f2e7c9;
+
+    box-shadow:
+    0 12px 28px rgba(148,102,33,.08);
 
 }
 
@@ -582,7 +656,7 @@ h1{
 
 .tool-section-header h2{
 
-    font-size:1.2rem;
+    font-size:1.15rem;
 
     margin-bottom:6px;
 
@@ -592,7 +666,7 @@ h1{
 
     margin-bottom:0 !important;
 
-    color:var(--subtext);
+    color:#7b6a4d;
 
     line-height:1.6;
 
@@ -612,9 +686,9 @@ h1{
 
     margin:0 !important;
 
-    padding:16px 12px;
+    padding:18px 14px;
 
-    font-size:.95rem;
+    font-size:.92rem;
 
     line-height:1.4;
 
@@ -627,6 +701,20 @@ h1{
     justify-content:center;
 
     text-align:center;
+
+    border:1px solid rgba(226,214,187,.9);
+
+    box-shadow:
+    0 8px 18px rgba(148,102,33,.08);
+
+}
+
+.tool-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 22px rgba(148,102,33,.12);
 
 }
 
