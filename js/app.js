@@ -100,6 +100,22 @@ const clearNoteBtn =
     document.getElementById(
         "clear-note-btn"
     );
+const memoryKeywordTitle =
+    document.getElementById(
+        "memory-keyword-title"
+    );
+const memoryKeywordDescription =
+    document.getElementById(
+        "memory-keyword-description"
+    );
+const memoryKeywordStatus =
+    document.getElementById(
+        "memory-keyword-status"
+    );
+const memoryKeywordLink =
+    document.getElementById(
+        "memory-keyword-link"
+    );
 
 const backHomeBtn =
     document.getElementById(
@@ -132,11 +148,194 @@ let wrongQuestionsThisRound = [];
 
 let isRetryMode = false;
 
+const DAILY_MEMORY_KEYWORDS = [
+
+    {
+        title: "훈구 vs 사림",
+        description:
+            "조선 정치 세력의 차이와 시험 포인트를 빠르게 정리해보세요.",
+        href:
+            "pages/compare/hungu-vs-sarim.html"
+    },
+
+    {
+        title:
+            "갑오개혁 vs 을미개혁 vs 광무개혁",
+        description:
+            "개항기 개혁의 흐름과 차이를 핵심만 비교해보세요.",
+        href:
+            "pages/compare/gabo-eulmi-gwangmu.html"
+    },
+
+    {
+        title:
+            "독립협회 vs 보안회 vs 신민회",
+        description:
+            "근대 단체의 목표와 활동 차이를 한 번에 정리해보세요.",
+        href:
+            "pages/compare/independence-bosu-shinminhoe.html"
+    },
+
+    {
+        title:
+            "대동법 vs 균역법 vs 영정법",
+        description:
+            "조선 수취 제도의 변화 흐름을 비교해서 익혀보세요.",
+        href:
+            "pages/compare/daedong-gyunyeok-yeongjeong.html"
+    },
+
+    {
+        title:
+            "의병 운동 vs 애국계몽운동",
+        description:
+            "항일 운동의 성격과 전개 차이를 핵심만 정리해보세요.",
+        href:
+            "pages/compare/uibyeong-vs-enlightenment.html"
+    },
+
+    {
+        title:
+            "집사부 vs 상대등",
+        description:
+            "통일신라의 권력 구조 변화를 비교하며 정리해보세요.",
+        href:
+            "pages/compare/jipsabu-vs-sangdaedeung.html"
+    },
+
+    {
+        title:
+            "진대법 vs 의창",
+        description:
+            "대표적인 구휼 제도의 차이를 빠르게 비교해보세요.",
+        href:
+            "pages/compare/jindaebeop-vs-uichang.html"
+    },
+
+    {
+        title:
+            "거란 vs 여진 vs 몽골",
+        description:
+            "고려의 대외 관계 흐름을 침입과 대응 중심으로 정리해보세요.",
+        href:
+            "pages/compare/khitan-jurchen-mongol.html"
+    },
+
+    {
+        title:
+            "흥선대원군 개혁 vs 갑오개혁",
+        description:
+            "개항기 전환기의 개혁 흐름을 비교해보세요.",
+        href:
+            "pages/compare/daewongun-vs-gabo.html"
+    },
+
+    {
+        title:
+            "골품제 vs 관등제",
+        description:
+            "신분 질서와 관료 체계의 차이를 핵심만 구분해보세요.",
+        href:
+            "pages/compare/golpum-vs-gwandeung.html"
+    }
+
+];
+
 function shuffle(array){
 
     return [...array].sort(
         () => Math.random() - 0.5
     );
+
+}
+
+function getDailyMemoryKeyword(){
+
+    const startDate =
+        new Date("2026-06-16T00:00:00+09:00");
+
+    const now =
+        new Date();
+
+    const today =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
+        );
+
+    const start =
+        new Date(
+            startDate.getFullYear(),
+            startDate.getMonth(),
+            startDate.getDate()
+        );
+
+    const diffDays =
+        Math.floor(
+            (today - start)
+            /
+            (1000 * 60 * 60 * 24)
+        );
+
+    const index =
+        (
+            diffDays
+            %
+            DAILY_MEMORY_KEYWORDS.length
+            +
+            DAILY_MEMORY_KEYWORDS.length
+        )
+        %
+        DAILY_MEMORY_KEYWORDS.length;
+
+    return DAILY_MEMORY_KEYWORDS[index];
+
+}
+
+function renderDailyMemoryKeyword(){
+
+    const keyword =
+        getDailyMemoryKeyword();
+
+    memoryKeywordTitle.textContent =
+        keyword.title;
+
+    memoryKeywordDescription.textContent =
+        keyword.description;
+
+    if(keyword.href){
+
+        memoryKeywordLink.textContent =
+            "자세히 보기";
+
+        memoryKeywordLink.href =
+            keyword.href;
+
+        memoryKeywordLink.classList.remove(
+            "disabled"
+        );
+
+        memoryKeywordStatus.hidden = true;
+        memoryKeywordStatus.textContent =
+            "";
+
+        return;
+
+    }
+
+    memoryKeywordLink.textContent =
+        "곧 추가됩니다";
+
+    memoryKeywordLink.href = "#";
+
+    memoryKeywordLink.classList.add(
+        "disabled"
+    );
+
+    memoryKeywordStatus.hidden = false;
+    memoryKeywordStatus.textContent =
+        "이 비교 정리 페이지는 현재 제작 중입니다.";
 
 }
 function shuffleQuestion(question){
@@ -649,6 +848,7 @@ choiceButtons.forEach(
 
 loadStats();
 updateHomeButton();
+renderDailyMemoryKeyword();
 function showWrongNote(){
 
     homeScreen.classList.remove("active");
