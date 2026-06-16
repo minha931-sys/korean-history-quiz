@@ -790,7 +790,7 @@ function shareResult(){
 
 점수 : ${score}/${selectedQuestions.length}
 
-${getGrade(score)}
+등급 : ${getGrade(score)}
 
 당신은 몇 점 받을 수 있나요?
 
