@@ -162,6 +162,28 @@
 
 }
 
+.timeline-auto-next-message{
+
+    display:none;
+
+    margin:10px 0 0;
+
+    color:#6b7280;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+.timeline-auto-next-message.show{
+
+    display:block;
+
+}
+
 .choice-btn:hover{
 
     border-color:#2563eb;

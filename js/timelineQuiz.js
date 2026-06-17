@@ -101,6 +101,14 @@ function getRandomQuestion(){
 
         </div>
 
+        <p
+            class="timeline-auto-next-message"
+            id="timeline-auto-next-message">
+
+            3초 뒤 다음 문제로 자동으로 넘어가집니다.
+
+        </p>
+
     `;
 }
 
@@ -148,6 +156,19 @@ function checkAnswer(choiceIndex){
         <span class="answer-badge">정답</span>
     `;
 
+    const autoNextMessage =
+        document.getElementById(
+            "timeline-auto-next-message"
+        );
+
+    if(autoNextMessage){
+
+        autoNextMessage.classList.add(
+            "show"
+        );
+
+    }
+
     if(
         selectedChoice.event ===
         currentQuestion.event
@@ -180,7 +201,7 @@ function checkAnswer(choiceIndex){
                 getRandomQuestion();
 
             },
-            2000
+            3000
         );
 
 }
