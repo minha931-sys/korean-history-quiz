@@ -148,6 +148,27 @@ let wrongQuestionsThisRound = [];
 
 let isRetryMode = false;
 
+let activeQuizCategory = "all";
+
+function trackGaEvent(eventName, eventParams = {}){
+
+    if(
+        typeof window === "undefined" ||
+        typeof window.gtag !== "function"
+    ){
+
+        return;
+
+    }
+
+    window.gtag(
+        "event",
+        eventName,
+        eventParams
+    );
+
+}
+
 const DAILY_MEMORY_KEYWORDS = [
 
     {
@@ -392,12 +413,15 @@ function buildQuizSet(quizCount, selectedCategory) {
 
 }
 
-function startQuiz(){
+function startQuiz(startSource = "start_button"){
 
     const selectedCategory =
         categorySelect.value;
 
     const quizCount = 10;
+
+    activeQuizCategory =
+        selectedCategory;
 
     selectedQuestions =
         buildQuizSet(
@@ -425,6 +449,20 @@ function startQuiz(){
 
     quizScreen.classList.add(
         "active"
+    );
+
+    trackGaEvent(
+        "quiz_start",
+        {
+            quiz_type:
+                "main",
+            quiz_category:
+                activeQuizCategory,
+            question_count:
+                selectedQuestions.length,
+            start_source:
+                startSource
+        }
     );
 
     showQuestion();
@@ -708,6 +746,29 @@ function showResult(){
             (score / selectedQuestions.length)
             * 100
         );
+
+    if(!isRetryMode){
+
+        trackGaEvent(
+            "quiz_complete",
+            {
+                quiz_type:
+                    "main",
+                quiz_category:
+                    activeQuizCategory,
+                question_count:
+                    selectedQuestions.length,
+                score:
+                    score,
+                accuracy:
+                    accuracy,
+                wrong_count:
+                    wrongQuestionsThisRound.length
+            }
+        );
+
+    }
+
     scoreDisplay.innerHTML =
     `${score} / ${selectedQuestions.length}`;
 
@@ -823,12 +884,24 @@ ${window.location.href}`;
 
 startBtn.addEventListener(
     "click",
-    startQuiz
+    ()=>{
+
+        startQuiz(
+            "start_button"
+        );
+
+    }
 );
 
 restartBtn.addEventListener(
     "click",
-    startQuiz
+    ()=>{
+
+        startQuiz(
+            "restart_button"
+        );
+
+    }
 );
 
 shareBtn.addEventListener(
