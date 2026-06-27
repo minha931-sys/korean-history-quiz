@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -44,7 +44,7 @@
 
   <url>
     <loc>https://hanguksaquiz.com/pages/compare/index.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-27</lastmod>
   </url>
 
   <url>
@@ -97,5 +97,45 @@
     <lastmod>2026-06-19</lastmod>
   </url>
 
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/imogunran-vs-gapsinjeongbyeon.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/wijeongcheoksa-vs-gaehwa.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/susinsa-josashichaldan-yeongseonsa-bobingsa.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/tongni-gimua-mun-vs-gunguk-gimucheo.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/gapsinjeongbyeon-vs-donghak.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/mulsan-vs-minlip-university.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/honggyeongnae-vs-jinju.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/musin-vs-myocheng.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/gwageo-vs-eumseo.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
+  <url>
+    <loc>https://hanguksaquiz.com/pages/compare/hyanggyo-seowon-hyangyak.html</loc>
+    <lastmod>2026-06-27</lastmod>
+  </url>
 </urlset>
 

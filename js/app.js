@@ -6,6 +6,10 @@ const timelineBtn =
     document.getElementById(
         "timeline-btn"
     );
+const compareBtn =
+    document.getElementById(
+        "compare-btn"
+    );
 const analysisBtn =
     document.getElementById(
         "analysis-btn"
@@ -111,6 +115,10 @@ const memoryKeywordDescription =
 const memoryKeywordStatus =
     document.getElementById(
         "memory-keyword-status"
+    );
+const memoryKeywordDate =
+    document.getElementById(
+        "memory-keyword-date"
     );
 const memoryKeywordLink =
     document.getElementById(
@@ -318,6 +326,24 @@ function renderDailyMemoryKeyword(){
 
     const keyword =
         getDailyMemoryKeyword();
+
+    const todayText =
+        new Intl.DateTimeFormat(
+            "ko-KR",
+            {
+                timeZone:
+                    "Asia/Seoul",
+                month:
+                    "long",
+                day:
+                    "numeric"
+            }
+        ).format(
+            new Date()
+        );
+
+    memoryKeywordDate.textContent =
+        todayText;
 
     memoryKeywordTitle.textContent =
         keyword.title;
@@ -717,6 +743,16 @@ timelineBtn.addEventListener(
 
         location.href =
             "pages/timeline.html";
+
+    }
+);
+
+compareBtn.addEventListener(
+    "click",
+    ()=>{
+
+        location.href =
+            "pages/compare/index.html";
 
     }
 );
