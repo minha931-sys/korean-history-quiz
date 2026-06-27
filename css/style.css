@@ -310,6 +310,109 @@ h1{
 
 }
 
+.result-tool-section{
+
+    margin-top:24px;
+
+    padding:18px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f8fbff,
+        #fffdf8
+    );
+
+}
+
+.result-tool-header{
+
+    margin-bottom:14px;
+
+    text-align:center;
+
+}
+
+.result-tool-header h3{
+
+    margin-bottom:5px;
+
+    font-size:1rem;
+
+}
+
+.result-tool-header p{
+
+    margin-bottom:0 !important;
+
+    color:var(--subtext);
+
+    font-size:.88rem;
+
+    line-height:1.5;
+
+    word-break:keep-all;
+
+    overflow-wrap:break-word;
+
+}
+
+.result-tool-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4, 1fr);
+
+    gap:10px;
+
+}
+
+.result-tool-btn{
+
+    min-height:50px;
+
+    padding:10px 8px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#10b981;
+
+    color:white;
+
+    font-size:.86rem;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    word-break:keep-all;
+
+}
+
+.result-tool-btn:nth-child(n+3){
+
+    background:#f59e0b;
+
+}
+
+.result-tool-btn:hover{
+
+    filter:brightness(.94);
+
+    transform:translateY(-2px);
+
+}
+
 /* 애니메이션 */
 
 .hero-card,
@@ -500,6 +603,28 @@ h1{
     .tool-section{
 
         padding:14px 12px;
+
+    }
+
+    .result-tool-section{
+
+        margin-top:20px;
+
+        padding:16px 14px;
+
+    }
+
+    .result-tool-grid{
+
+        grid-template-columns:repeat(2, 1fr);
+
+    }
+
+    .result-tool-btn{
+
+        min-height:48px;
+
+        font-size:.8rem;
 
     }
 

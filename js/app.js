@@ -74,6 +74,22 @@ const retryWrongBtn =
     document.getElementById(
         "retry-wrong-btn"
     );
+const resultWrongNoteBtn =
+    document.getElementById(
+        "result-wrong-note-btn"
+    );
+const resultAnalysisBtn =
+    document.getElementById(
+        "result-analysis-btn"
+    );
+const resultTimelineBtn =
+    document.getElementById(
+        "result-timeline-btn"
+    );
+const resultCompareBtn =
+    document.getElementById(
+        "result-compare-btn"
+    );
 
 const nextBtn =
     document.getElementById(
@@ -1066,6 +1082,32 @@ wrongNoteBtn.addEventListener(
 analysisBtn.addEventListener(
     "click",
     showAnalysis
+);
+resultWrongNoteBtn.addEventListener(
+    "click",
+    showWrongNote
+);
+resultAnalysisBtn.addEventListener(
+    "click",
+    showAnalysis
+);
+resultTimelineBtn.addEventListener(
+    "click",
+    ()=>{
+
+        location.href =
+            "pages/timeline.html";
+
+    }
+);
+resultCompareBtn.addEventListener(
+    "click",
+    ()=>{
+
+        location.href =
+            "pages/compare/index.html";
+
+    }
 );
 backHomeBtn.addEventListener(
     "click",
