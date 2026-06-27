@@ -99,6 +99,16 @@ body{
 
 /* 홈 화면 */
 
+#home-screen{
+
+    word-break:keep-all;
+
+    overflow-wrap:break-word;
+
+    line-break:strict;
+
+}
+
 .logo{
 
     font-size:4rem;
