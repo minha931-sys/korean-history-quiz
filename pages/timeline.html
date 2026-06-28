@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <link rel="canonical"
@@ -53,7 +53,7 @@ gtag('config', 'G-KTT9T9VYDK');
 })(window, document, "clarity", "script", "xd3m0awhwj");
 </script>
 <link rel="stylesheet"
-      href="../css/style.css?v=20260628-timeline-guide">
+      href="../css/style.css?v=20260629-mobile-menu-fixed-links">
 <link rel="stylesheet"
       href="../css/quiz.css">
 
@@ -64,21 +64,27 @@ gtag('config', 'G-KTT9T9VYDK');
 
 <div class="container">
 
+
+<nav class="subpage-nav" aria-label="학습 페이지 이동">
+
+
+<a href="../" class="subpage-brand">한국사 10분 챌린지</a>
+<button type="button" class="mobile-nav-toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
+<a href="../" class="mobile-nav-link">실력점검</a>
+<a href="compare/index.html" class="mobile-nav-link">헷갈리는 개념</a>
+<a href="timeline.html" class="mobile-nav-link">핵심연표</a>
+<a href="contact.html" class="mobile-nav-link">문의하기</a>
+<a href="../" class="home-cta">한국사 실력 점검</a>
+<a href="compare/index.html">헷갈리는 개념 모아보기</a>
+<a href="timeline.html">핵심 연표</a>
+
+</nav>
 <div class="result-card timeline-page-card">
-
-<button
-class="home-btn timeline-home-btn"
-title="홈으로"
-onclick="location.href='../'">
-
-    🏠
-
-</button>
 
 <div class="timeline-header">
 
 <h1>
-한국사 연표
+한국사 핵심 연표
 </h1>
 
 <p class="timeline-intro">
@@ -207,6 +213,59 @@ class="primary-btn">
 
 </div>
 
+<section class="timeline-deep-guide"
+         aria-labelledby="timeline-deep-guide-title">
+
+<h2 id="timeline-deep-guide-title">
+시대별로 확인해야 할 핵심 흐름
+</h2>
+
+<p>
+한국사 연표를 볼 때는 모든 사건을 같은 비중으로 외우기보다, 시대마다 먼저 잡아야 할 흐름을 구분하는 것이 좋습니다.
+고조선·삼국은 국가의 성립과 삼국의 경쟁, 한강 유역 확보, 삼국 통일 과정을 중심으로 보면 됩니다.
+통일신라와 발해는 남북국 체제, 신라 말 사회 동요, 후삼국 성립으로 이어지는 흐름을 함께 확인하는 것이 중요합니다.
+</p>
+
+<p>
+고려는 왕권 강화 정책, 문벌 귀족 사회, 무신 정권, 원 간섭기, 고려 말 개혁과 조선 건국으로 이어지는 변화가 핵심입니다.
+조선은 건국과 통치 체제 정비, 사림의 성장, 왜란과 호란 이후의 변화, 조선 후기 수취 제도 개편과 세도 정치의 문제를 연결해서 보면 좋습니다.
+근현대사는 개항 이후 개화 정책, 국권 침탈, 독립운동, 광복과 정부 수립의 순서를 잡는 것이 가장 중요합니다.
+</p>
+
+<div class="timeline-deep-guide-grid">
+
+<article>
+<h3>
+연표를 활용하는 3단계
+</h3>
+<ol>
+<li>먼저 시대 이름만 보고 대표 사건을 떠올립니다.</li>
+<li>사건을 연도순으로 보며 원인과 결과를 연결합니다.</li>
+<li>헷갈리는 사건은 연표 퀴즈나 비교 정리로 다시 확인합니다.</li>
+</ol>
+</article>
+
+<article>
+<h3>
+자주 헷갈리는 흐름 예시
+</h3>
+<p>
+고려 대외 관계는 거란, 여진, 몽골의 순서와 대응 방식이 자주 섞입니다.
+거란은 서희와 강감찬, 여진은 윤관과 별무반, 몽골은 강화도 천도와 삼별초 항쟁을 함께 묶어보세요.
+</p>
+<p>
+근현대사는 강화도 조약 이후 개화 정책, 임오군란, 갑신정변, 동학 농민 운동, 갑오개혁으로 이어지는 흐름을 먼저 잡으면 좋습니다.
+</p>
+</article>
+
+</div>
+
+<p class="timeline-deep-guide-note">
+연표를 한 번 훑은 뒤에는 연표 퀴즈로 순서를 점검하고, 비슷한 제도나 사건은 비교 정리 페이지에서 따로 확인해보세요.
+</p>
+
+</section>
+
 <section class="timeline-review-guide"
          aria-labelledby="timeline-review-guide-title">
 
@@ -253,9 +312,21 @@ class="primary-btn">
 
 </div>
 
+
+<footer class="site-footer">
+
+    <a href="about.html">소개</a>
+    <a href="faq.html">FAQ</a>
+    <a href="timeline.html">한국사 연표</a>
+    <a href="privacy.html">개인정보처리방침</a>
+    <a href="terms.html">이용약관</a>
+    <a href="contact.html">문의하기</a>
+
+</footer>
 </div>
 
 <script src="../js/timeline.js"></script>
 
+<script src="../js/nav.js"></script>
 </body>
 </html>

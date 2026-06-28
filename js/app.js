@@ -23,11 +23,6 @@ const analysisHomeBtn =
     document.getElementById(
         "analysis-home-btn"
     );
-const homeBtn =
-    document.getElementById(
-        "home-btn"
-    );
-
 const homeScreen =
     document.getElementById("home-screen");
 
@@ -164,6 +159,82 @@ function bindClick(
 
 }
 
+function setupMobileNav(){
+
+    document.querySelectorAll(".subpage-nav").forEach(
+        nav => {
+
+            let toggle =
+                nav.querySelector(".mobile-nav-toggle");
+
+            if(!toggle){
+
+                toggle =
+                    document.createElement("button");
+
+                toggle.type =
+                    "button";
+
+                toggle.className =
+                    "mobile-nav-toggle";
+
+                toggle.setAttribute(
+                    "aria-label",
+                    "메뉴 열기"
+                );
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                toggle.innerHTML =
+                    "<span></span>";
+
+                nav.appendChild(
+                    toggle
+                );
+
+            }
+
+            if(toggle.dataset.navReady === "true"){
+
+                return;
+
+            }
+
+            toggle.dataset.navReady =
+                "true";
+
+            toggle.addEventListener(
+                "click",
+                () => {
+
+                    const isOpen =
+                        nav.classList.toggle(
+                            "is-open"
+                        );
+
+                    toggle.setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
+                    );
+
+                    toggle.setAttribute(
+                        "aria-label",
+                        isOpen ? "메뉴 닫기" : "메뉴 열기"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+setupMobileNav();
+
 bindClick(
     analysisHomeBtn,
     ()=>{
@@ -175,8 +246,6 @@ bindClick(
         homeScreen.classList.add(
             "active"
         );
-
-        updateHomeButton();
 
     }
 );
@@ -418,18 +487,9 @@ function renderDailyMemoryKeyword(){
 
     }
 
-    memoryKeywordLink.textContent =
-        "곧 추가됩니다";
-
-    memoryKeywordLink.href = "#";
-
-    memoryKeywordLink.classList.add(
-        "disabled"
-    );
-
-    memoryKeywordStatus.hidden = false;
-    memoryKeywordStatus.textContent =
-        "아직 연결된 상세 페이지가 없습니다.";
+    memoryKeywordLink.hidden = true;
+    memoryKeywordStatus.hidden = true;
+    memoryKeywordStatus.textContent = "";
 
 }
 function shuffleQuestion(question){
@@ -563,7 +623,6 @@ function startQuiz(startSource = "start_button"){
     );
 
     showQuestion();
-    updateHomeButton();
 
 }
 
@@ -906,7 +965,6 @@ function showResult(){
         saveStats(score);
 
     }
-    updateHomeButton();
 
     if(isRetryMode){
 
@@ -1056,7 +1114,6 @@ choiceButtons.forEach(
 try{
 
     loadStats();
-    updateHomeButton();
     renderDailyMemoryKeyword();
 
 }
@@ -1079,7 +1136,6 @@ function showWrongNote(){
     "active"
     );
     wrongNoteScreen.classList.add("active");
-    updateHomeButton();
 
     const wrongQuestions =
         getWrongQuestions();
@@ -1216,7 +1272,6 @@ bindClick(
         homeScreen.classList.add(
             "active"    
         );
-        updateHomeButton();
 
     }
 );
@@ -1342,68 +1397,6 @@ bindClick(
 
     }
 );
-bindClick(
-    homeBtn,
-    ()=>{
-
-        if(
-            confirm(
-                "홈 화면으로 이동할까요?"
-            )
-        ){
-
-            quizScreen.classList.remove(
-                "active"
-            );
-
-            resultScreen.classList.remove(
-                "active"
-            );
-
-            wrongNoteScreen.classList.remove(
-                "active"
-            );
-
-            analysisScreen.classList.remove(
-            "active"
-            );
-
-            homeScreen.classList.add(
-                "active"
-            );
-
-        }
-
-    }
-);
-function updateHomeButton(){
-
-    if(
-        !homeBtn ||
-        !homeScreen
-    ){
-
-        return;
-
-    }
-
-    if(
-        homeScreen.classList.contains(
-            "active"
-        )
-    ){
-
-        homeBtn.style.display =
-            "none";
-
-    }else{
-
-        homeBtn.style.display =
-            "block";
-
-    }
-
-}
 function showAnalysis(){
 
     const totalSolved =
@@ -1443,8 +1436,6 @@ function showAnalysis(){
     analysisScreen.classList.add(
         "active"
     );
-
-    updateHomeButton();
 
     const stats =
         getCategoryStats();

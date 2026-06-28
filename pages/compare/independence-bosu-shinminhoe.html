@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 
@@ -55,7 +55,7 @@ gtag('config', 'G-KTT9T9VYDK');
 })(window, document, "clarity", "script", "xd3m0awhwj");
 </script>
 <link rel="stylesheet"
-      href="../../css/style.css">
+      href="../../css/style.css?v=20260629-mobile-menu-fixed-links">
 <link rel="stylesheet"
       href="../../css/quiz.css">
 
@@ -114,15 +114,22 @@ gtag('config', 'G-KTT9T9VYDK');
 </script>
 </head>
 
-<body>
+<body class="compare-detail-page">
 
 <div class="container">
 
 <nav class="subpage-nav" aria-label="학습 페이지 이동">
 
-<a href="../../">한국사 실력점검하기</a>
+
+<a href="../../" class="subpage-brand">한국사 10분 챌린지</a>
+<button type="button" class="mobile-nav-toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
+<a href="../../" class="mobile-nav-link">실력점검</a>
+<a href="index.html" class="mobile-nav-link">헷갈리는 개념</a>
+<a href="../timeline.html" class="mobile-nav-link">핵심연표</a>
+<a href="../contact.html" class="mobile-nav-link">문의하기</a>
+<a href="../../" class="home-cta">한국사 실력 점검</a>
 <a href="index.html">헷갈리는 개념 모아보기</a>
-<a href="../timeline.html">핵심 연표</a>
+<a href="../timeline.html">연표로 흐름 보기</a>
 
 </nav>
 
@@ -182,7 +189,7 @@ gtag('config', 'G-KTT9T9VYDK');
 
 </div>
 <section class="compare-quick-review" aria-labelledby="quick-review-title">
-<h2 id="quick-review-title">표 아래 핵심만 다시 정리</h2>
+<h2 id="quick-review-title">핵심 정리</h2>
 <div class="compare-quick-grid">
 <article class="compare-quick-card">
 <strong>시험 포인트</strong>
@@ -346,7 +353,24 @@ gtag('config', 'G-KTT9T9VYDK');
 
 </div>
 
+
+<footer class="site-footer">
+
+    <a href="../about.html">소개</a>
+    <a href="../faq.html">FAQ</a>
+    <a href="../timeline.html">한국사 연표</a>
+    <a href="../privacy.html">개인정보처리방침</a>
+    <a href="../terms.html">이용약관</a>
+    <a href="../contact.html">문의하기</a>
+
+</footer>
 </div>
 
+<nav class="compare-mobile-tabbar" aria-label="비교 상세 모바일 이동">
+    <a href="index.html">헷갈리는 개념 모음</a>
+    <a href="../timeline.html">연표로 흐름 보기</a>
+    <a href="../../">퀴즈로 실력 점검</a>
+</nav>
+<script src="../../js/nav.js"></script>
 </body>
 </html>
