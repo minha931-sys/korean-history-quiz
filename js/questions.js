@@ -11,3 +11,5 @@ const QUESTIONS = [
     ...MODERN_QUESTIONS
 
 ];
+
+window.QUESTIONS = QUESTIONS;

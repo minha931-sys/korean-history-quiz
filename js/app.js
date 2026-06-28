@@ -145,8 +145,27 @@ const backHomeBtn =
     document.getElementById(
         "back-home-btn"
     );
-analysisHomeBtn.addEventListener(
-    "click",
+
+function bindClick(
+    element,
+    handler
+){
+
+    if(!element){
+
+        return;
+
+    }
+
+    element.addEventListener(
+        "click",
+        handler
+    );
+
+}
+
+bindClick(
+    analysisHomeBtn,
     ()=>{
 
         analysisScreen.classList.remove(
@@ -340,6 +359,18 @@ function getDailyMemoryKeyword(){
 
 function renderDailyMemoryKeyword(){
 
+    if(
+        !memoryKeywordDate ||
+        !memoryKeywordTitle ||
+        !memoryKeywordDescription ||
+        !memoryKeywordLink ||
+        !memoryKeywordStatus
+    ){
+
+        return;
+
+    }
+
     const keyword =
         getDailyMemoryKeyword();
 
@@ -442,10 +473,22 @@ function shuffleQuestion(question){
 
 function buildQuizSet(quizCount, selectedCategory) {
 
+    const allQuestions =
+        (
+            typeof window !== "undefined" &&
+            Array.isArray(window.QUESTIONS)
+        )
+            ? window.QUESTIONS
+            : (
+                typeof QUESTIONS === "undefined"
+                    ? []
+                    : QUESTIONS
+            );
+
     const pool =
         selectedCategory === "all"
-            ? QUESTIONS
-            : QUESTIONS.filter(
+            ? allQuestions
+            : allQuestions.filter(
                   q => q.category === selectedCategory
               );
 
@@ -458,7 +501,9 @@ function buildQuizSet(quizCount, selectedCategory) {
 function startQuiz(startSource = "start_button"){
 
     const selectedCategory =
-        categorySelect.value;
+        categorySelect
+            ? categorySelect.value
+            : "all";
 
     const quizCount = 10;
 
@@ -472,6 +517,16 @@ function startQuiz(startSource = "start_button"){
         ).map(
             shuffleQuestion
         );
+
+    if(selectedQuestions.length === 0){
+
+        alert(
+            "문제를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."
+        );
+
+        return;
+
+    }
 
     currentQuestionIndex = 0;
 
@@ -512,8 +567,8 @@ function startQuiz(startSource = "start_button"){
 
 }
 
-nextBtn.addEventListener(
-    "click",
+bindClick(
+    nextBtn,
     ()=>{
 
         currentQuestionIndex++;
@@ -753,8 +808,8 @@ function getGrade(score){
     return "📖 역사 입문자";
 
 }
-timelineBtn.addEventListener(
-    "click",
+bindClick(
+    timelineBtn,
     ()=>{
 
         location.href =
@@ -763,8 +818,8 @@ timelineBtn.addEventListener(
     }
 );
 
-compareBtn.addEventListener(
-    "click",
+bindClick(
+    compareBtn,
     ()=>{
 
         location.href =
@@ -919,23 +974,50 @@ ${window.location.href}`;
             text:
                 text
 
+        }).catch(()=>{
+
+            // 공유 취소는 오류 상황이 아니므로 조용히 무시합니다.
+
         });
 
-    }else{
-
-        navigator.clipboard
-            .writeText(text);
-
-        alert(
-            "결과가 복사되었습니다."
-        );
+        return;
 
     }
 
+    if(
+        navigator.clipboard &&
+        typeof navigator.clipboard.writeText === "function"
+    ){
+
+        navigator.clipboard
+            .writeText(text)
+            .then(()=>{
+
+                alert(
+                    "결과가 복사되었습니다."
+                );
+
+            })
+            .catch(()=>{
+
+                alert(
+                    text
+                );
+
+            });
+
+        return;
+
+    }
+
+    alert(
+        text
+    );
+
 }
 
-startBtn.addEventListener(
-    "click",
+bindClick(
+    startBtn,
     ()=>{
 
         startQuiz(
@@ -945,8 +1027,8 @@ startBtn.addEventListener(
     }
 );
 
-restartBtn.addEventListener(
-    "click",
+bindClick(
+    restartBtn,
     ()=>{
 
         startQuiz(
@@ -956,24 +1038,38 @@ restartBtn.addEventListener(
     }
 );
 
-shareBtn.addEventListener(
-    "click",
+bindClick(
+    shareBtn,
     shareResult
 );
 
 choiceButtons.forEach(
     (button,index)=>{
 
-    button.addEventListener(
-        "click",
+    bindClick(
+        button,
         ()=>selectAnswer(index)
     );
 
 });
 
-loadStats();
-updateHomeButton();
-renderDailyMemoryKeyword();
+try{
+
+    loadStats();
+    updateHomeButton();
+    renderDailyMemoryKeyword();
+
+}
+
+catch(error){
+
+    console.error(
+        "앱 초기화 중 오류가 발생했습니다.",
+        error
+    );
+
+}
+
 function showWrongNote(){
 
     homeScreen.classList.remove("active");
@@ -1075,24 +1171,24 @@ function showWrongNote(){
     });
 
 }
-wrongNoteBtn.addEventListener(
-    "click",
+bindClick(
+    wrongNoteBtn,
     showWrongNote
 );
-analysisBtn.addEventListener(
-    "click",
+bindClick(
+    analysisBtn,
     showAnalysis
 );
-resultWrongNoteBtn.addEventListener(
-    "click",
+bindClick(
+    resultWrongNoteBtn,
     showWrongNote
 );
-resultAnalysisBtn.addEventListener(
-    "click",
+bindClick(
+    resultAnalysisBtn,
     showAnalysis
 );
-resultTimelineBtn.addEventListener(
-    "click",
+bindClick(
+    resultTimelineBtn,
     ()=>{
 
         location.href =
@@ -1100,8 +1196,8 @@ resultTimelineBtn.addEventListener(
 
     }
 );
-resultCompareBtn.addEventListener(
-    "click",
+bindClick(
+    resultCompareBtn,
     ()=>{
 
         location.href =
@@ -1109,8 +1205,8 @@ resultCompareBtn.addEventListener(
 
     }
 );
-backHomeBtn.addEventListener(
-    "click",
+bindClick(
+    backHomeBtn,
     ()=>{
 
         wrongNoteScreen.classList.remove(
@@ -1125,8 +1221,8 @@ backHomeBtn.addEventListener(
     }
 );
 
-clearNoteBtn.addEventListener(
-    "click",
+bindClick(
+    clearNoteBtn,
     ()=>{
 
         if(
@@ -1144,8 +1240,8 @@ clearNoteBtn.addEventListener(
     }
 );
 
-retryWrongBtn.addEventListener(
-    "click",
+bindClick(
+    retryWrongBtn,
     ()=>{
 
         if(isRetryMode){
@@ -1188,8 +1284,8 @@ retryWrongBtn.addEventListener(
     }
 );
 
-studyWrongBtn.addEventListener(
-    "click",
+bindClick(
+    studyWrongBtn,
     ()=>{
 
         const wrongQuestions =
@@ -1246,8 +1342,8 @@ studyWrongBtn.addEventListener(
 
     }
 );
-homeBtn.addEventListener(
-    "click",
+bindClick(
+    homeBtn,
     ()=>{
 
         if(
@@ -1281,6 +1377,15 @@ homeBtn.addEventListener(
     }
 );
 function updateHomeButton(){
+
+    if(
+        !homeBtn ||
+        !homeScreen
+    ){
+
+        return;
+
+    }
 
     if(
         homeScreen.classList.contains(

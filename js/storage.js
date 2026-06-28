@@ -14,6 +14,57 @@ const STORAGE_KEYS = {
 
 };
 
+function storageGetItem(key){
+
+    try{
+
+        return localStorage.getItem(key);
+
+    }
+
+    catch{
+
+        return null;
+
+    }
+
+}
+
+function storageSetItem(key, value){
+
+    try{
+
+        localStorage.setItem(
+            key,
+            value
+        );
+
+    }
+
+    catch{
+
+        // 학습 기록 저장이 제한된 환경에서도 퀴즈 이용은 계속 가능하게 둡니다.
+
+    }
+
+}
+
+function storageRemoveItem(key){
+
+    try{
+
+        localStorage.removeItem(key);
+
+    }
+
+    catch{
+
+        // 저장소 접근이 차단된 경우 무시합니다.
+
+    }
+
+}
+
 function safeParse(
     value,
     fallback
@@ -45,14 +96,14 @@ function saveStats(score){
 
     if(score > currentBest){
 
-        localStorage.setItem(
+        storageSetItem(
             STORAGE_KEYS.BEST_SCORE,
             score
         );
 
     }
 
-    localStorage.setItem(
+    storageSetItem(
         STORAGE_KEYS.PLAY_COUNT,
         currentPlayCount + 1
     );
@@ -65,7 +116,7 @@ function getBestScore(){
 
     return Number(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.BEST_SCORE
         )
 
@@ -77,7 +128,7 @@ function getPlayCount(){
 
     return Number(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.PLAY_COUNT
         )
 
@@ -126,7 +177,7 @@ function getWrongQuestions(){
 
     return safeParse(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.WRONG_NOTE
         ),
 
@@ -160,7 +211,7 @@ function saveWrongQuestion(question){
 
     });
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.WRONG_NOTE,
 
@@ -174,7 +225,7 @@ function saveWrongQuestion(question){
 
 function clearWrongQuestions(){
 
-    localStorage.removeItem(
+    storageRemoveItem(
         STORAGE_KEYS.WRONG_NOTE
     );
 
@@ -197,7 +248,7 @@ function increaseReviewCount(questionId){
 
     }
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.WRONG_NOTE,
 
@@ -227,7 +278,7 @@ function removeWrongQuestion(questionId){
             }
         );
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.WRONG_NOTE,
 
@@ -256,7 +307,7 @@ function updateStreak(){
         }`;
     const lastDate =
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.LAST_STUDY_DATE
         );
 
@@ -264,7 +315,7 @@ function updateStreak(){
 
         Number(
 
-            localStorage.getItem(
+            storageGetItem(
                 STORAGE_KEYS.STREAK_COUNT
             )
 
@@ -314,7 +365,7 @@ function updateStreak(){
 
     }
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.STREAK_COUNT,
 
@@ -322,7 +373,7 @@ function updateStreak(){
 
     );
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.LAST_STUDY_DATE,
 
@@ -336,7 +387,7 @@ function getStreakCount(){
 
     return Number(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.STREAK_COUNT
         )
 
@@ -347,7 +398,7 @@ function getRecentResults(){
 
     return safeParse(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.RECENT_RESULTS
         ),
 
@@ -370,7 +421,7 @@ function saveRecentResult(isCorrect){
 
     }
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.RECENT_RESULTS,
 
@@ -410,7 +461,7 @@ function getCategoryStats(){
 
     return safeParse(
 
-        localStorage.getItem(
+        storageGetItem(
             STORAGE_KEYS.CATEGORY_STATS
         ),
 
@@ -448,7 +499,7 @@ function saveCategoryResult(
 
     }
 
-    localStorage.setItem(
+    storageSetItem(
 
         STORAGE_KEYS.CATEGORY_STATS,
 
