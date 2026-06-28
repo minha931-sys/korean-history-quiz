@@ -3449,3 +3449,98 @@ h1{
     }
 
 }
+
+@media(max-width:768px){
+
+    .compare-category-section .compare-hub-grid,
+    .compare-hub-grid{
+
+        grid-template-columns:1fr !important;
+
+        gap:10px;
+
+    }
+
+    .compare-category-section{
+
+        padding:14px 12px;
+
+        border-radius:18px;
+
+    }
+
+    .compare-hub-card{
+
+        min-height:auto;
+
+        padding:14px 38px 14px 14px;
+
+        border-radius:14px;
+
+        background:#ffffff;
+
+    }
+
+    .compare-hub-card strong{
+
+        margin-bottom:4px;
+
+        font-size:.94rem;
+
+        line-height:1.42;
+
+        word-break:keep-all;
+
+        overflow-wrap:break-word;
+
+    }
+
+    .compare-hub-card span{
+
+        font-size:.84rem;
+
+        line-height:1.5;
+
+        word-break:keep-all;
+
+        overflow-wrap:break-word;
+
+    }
+
+    .compare-hub-card::after{
+
+        right:14px;
+
+        font-size:1.15rem;
+
+    }
+
+}
+
+@media(max-width:380px){
+
+    .compare-category-section{
+
+        padding:12px 10px;
+
+    }
+
+    .compare-hub-card{
+
+        padding:13px 34px 13px 12px;
+
+    }
+
+    .compare-hub-card strong{
+
+        font-size:.9rem;
+
+    }
+
+    .compare-hub-card span{
+
+        font-size:.8rem;
+
+    }
+
+}
