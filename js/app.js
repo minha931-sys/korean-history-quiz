@@ -1,4 +1,4 @@
-const studyWrongBtn =
+﻿const studyWrongBtn =
     document.getElementById(
         "study-wrong-btn"
     );
@@ -429,7 +429,7 @@ function renderDailyMemoryKeyword(){
 
     memoryKeywordStatus.hidden = false;
     memoryKeywordStatus.textContent =
-        "이 비교 정리 페이지는 현재 제작 중입니다.";
+        "아직 연결된 상세 페이지가 없습니다.";
 
 }
 function shuffleQuestion(question){

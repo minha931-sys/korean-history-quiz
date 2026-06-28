@@ -132,6 +132,66 @@ window.TIMELINE = {
         year:"676",
         event:"신라 - 매소성·기벌포 전투 승리",
         description:"신라가 당 세력을 몰아내며 삼국 통일 완성의 기반을 마련하였다."
+    },
+
+    {
+        year:"기원전 57",
+        event:"신라 - 건국",
+        description:"박혁거세가 신라를 세웠다고 전해진다."
+    },
+
+    {
+        year:"기원전 37",
+        event:"고구려 - 건국",
+        description:"주몽이 졸본 지역에서 고구려를 건국하였다."
+    },
+
+    {
+        year:"기원전 18",
+        event:"백제 - 건국",
+        description:"온조가 한강 유역을 중심으로 백제를 건국하였다."
+    },
+
+    {
+        year:"194",
+        event:"고구려 - 진대법 실시",
+        description:"고국천왕 때 을파소의 건의로 빈민 구제 제도인 진대법이 실시되었다."
+    },
+
+    {
+        year:"371",
+        event:"백제 - 평양성 공격",
+        description:"근초고왕이 고구려 평양성을 공격하여 백제의 전성기를 이끌었다."
+    },
+
+    {
+        year:"433",
+        event:"백제·신라 - 나제 동맹",
+        description:"백제와 신라가 고구려의 남진 정책에 대응하기 위해 동맹을 맺었다."
+    },
+
+    {
+        year:"503",
+        event:"신라 - 국호와 왕호 정비",
+        description:"지증왕 때 국호를 신라로 정하고 왕호를 사용하였다."
+    },
+
+    {
+        year:"520",
+        event:"신라 - 율령 반포",
+        description:"법흥왕이 율령을 반포하여 국가 통치 체제를 정비하였다."
+    },
+
+    {
+        year:"554",
+        event:"백제·신라 - 관산성 전투",
+        description:"성왕이 신라와의 전투에서 전사하며 백제의 한강 회복 시도가 좌절되었다."
+    },
+
+    {
+        year:"645",
+        event:"고구려 - 안시성 전투",
+        description:"고구려가 당 태종의 침입을 안시성에서 막아냈다."
     }
 
 ],
@@ -286,6 +346,66 @@ window.TIMELINE = {
         year:"936",
         event:"고려 - 후삼국 통일",
         description:"왕건이 후백제를 정복하여 후삼국을 통일하였다."
+    },
+
+    {
+        year:"681",
+        event:"신라 - 신문왕 즉위",
+        description:"신문왕이 즉위하여 왕권 강화와 통치 제도 정비를 추진하였다."
+    },
+
+    {
+        year:"685",
+        event:"신라 - 9주 5소경 정비",
+        description:"통일 이후 넓어진 영토를 다스리기 위해 지방 행정 체제를 정비하였다."
+    },
+
+    {
+        year:"687",
+        event:"신라 - 녹읍 폐지",
+        description:"신문왕이 귀족의 경제 기반을 약화하고 왕권을 강화하려 하였다."
+    },
+
+    {
+        year:"713",
+        event:"발해 - 대조영 책봉",
+        description:"당이 대조영을 발해군왕으로 책봉하며 발해의 존재가 국제적으로 확인되었다."
+    },
+
+    {
+        year:"727",
+        event:"발해 - 일본에 사신 파견",
+        description:"발해가 일본과 외교 관계를 맺으며 대외 교류를 확대하였다."
+    },
+
+    {
+        year:"780",
+        event:"신라 - 혜공왕 피살",
+        description:"혜공왕이 피살되며 진골 귀족 간 왕위 다툼이 심해졌다."
+    },
+
+    {
+        year:"818",
+        event:"신라 - 김헌창의 난",
+        description:"왕위 계승 문제에 불만을 품은 김헌창이 반란을 일으켰다."
+    },
+
+    {
+        year:"839",
+        event:"신라 - 장보고의 왕위 계승 개입",
+        description:"장보고가 신무왕 즉위에 영향을 주며 해상 세력의 정치적 영향력을 보여 주었다."
+    },
+
+    {
+        year:"894",
+        event:"신라 - 최치원 시무 10여조",
+        description:"최치원이 진성여왕에게 개혁안을 올렸으나 제대로 시행되지 못하였다."
+    },
+
+    {
+        year:"930",
+        event:"후삼국 - 고창 전투",
+        description:"왕건이 후백제군을 물리치며 후삼국 통일의 주도권을 강화하였다."
     }
 
     ],
@@ -446,6 +566,66 @@ window.TIMELINE = {
         year:"1392",
         event:"고려 - 멸망",
         description:"이성계가 조선을 건국하며 고려가 멸망하였다."
+    },
+
+    {
+        year:"943",
+        event:"고려 - 훈요 10조",
+        description:"태조 왕건이 후대 왕들에게 남긴 정치적 유훈이다."
+    },
+
+    {
+        year:"983",
+        event:"고려 - 12목 설치",
+        description:"성종이 지방 통치를 강화하기 위해 주요 지역에 지방관을 파견하였다."
+    },
+
+    {
+        year:"1011",
+        event:"고려 - 초조대장경 조판 시작",
+        description:"거란의 침입을 불교의 힘으로 극복하려는 염원을 담아 조판을 시작하였다."
+    },
+
+    {
+        year:"1076",
+        event:"고려 - 경정 전시과",
+        description:"문종 때 전시과 제도를 다시 정비하였다."
+    },
+
+    {
+        year:"1104",
+        event:"고려 - 별무반 편성",
+        description:"윤관의 건의로 여진에 대응하기 위한 특수 부대가 조직되었다."
+    },
+
+    {
+        year:"1198",
+        event:"고려 - 만적의 난",
+        description:"최충헌의 사노비 만적 등이 신분 해방을 꿈꾸며 봉기를 계획하였다."
+    },
+
+    {
+        year:"1219",
+        event:"고려 - 강동성 전투",
+        description:"고려가 몽골과 함께 거란 유민 세력을 물리쳤다."
+    },
+
+    {
+        year:"1236",
+        event:"고려 - 팔만대장경 조판 시작",
+        description:"몽골 침입을 극복하려는 염원을 담아 팔만대장경 조판을 시작하였다."
+    },
+
+    {
+        year:"1274",
+        event:"고려 - 여몽 연합군 일본 원정",
+        description:"원과 고려의 연합군이 일본 원정에 동원되었다."
+    },
+
+    {
+        year:"1389",
+        event:"고려 - 박위의 대마도 정벌",
+        description:"왜구의 근거지를 공격하기 위해 박위가 대마도를 정벌하였다."
     }
 
 ],
@@ -612,6 +792,66 @@ window.TIMELINE = {
         year:"1876",
         event:"조선 - 강화도조약",
         description:"조선 최초의 근대적 조약이 체결되었다."
+    },
+
+    {
+        year:"1400",
+        event:"조선 - 제2차 왕자의 난",
+        description:"태종이 권력 다툼에서 승리하며 왕권 강화의 기반을 마련하였다."
+    },
+
+    {
+        year:"1413",
+        event:"조선 - 8도 체제 정비",
+        description:"태종 때 지방 행정 구역이 정비되어 중앙 집권 체제가 강화되었다."
+    },
+
+    {
+        year:"1433",
+        event:"조선 - 4군 설치",
+        description:"세종 때 압록강 유역에 4군을 설치하여 북방 영토를 개척하였다."
+    },
+
+    {
+        year:"1434",
+        event:"조선 - 6진 개척",
+        description:"세종 때 두만강 유역에 6진을 설치하여 북방 방어를 강화하였다."
+    },
+
+    {
+        year:"1453",
+        event:"조선 - 계유정난",
+        description:"수양대군이 권력을 장악하며 세조 즉위의 기반을 마련하였다."
+    },
+
+    {
+        year:"1510",
+        event:"조선 - 삼포왜란",
+        description:"삼포 지역의 일본인 거류민들이 조선의 통제에 반발해 난을 일으켰다."
+    },
+
+    {
+        year:"1555",
+        event:"조선 - 을묘왜변",
+        description:"왜구가 전라도 해안 지역을 침입하여 조선의 해안 방어 문제가 드러났다."
+    },
+
+    {
+        year:"1607",
+        event:"조선 - 통신사 파견 재개",
+        description:"임진왜란 이후 조선과 일본의 외교 관계가 다시 정비되기 시작하였다."
+    },
+
+    {
+        year:"1708",
+        event:"조선 - 대동법 전국 확대",
+        description:"공납 부담을 줄이기 위한 대동법이 전국적으로 확대 시행되었다."
+    },
+
+    {
+        year:"1750",
+        event:"조선 - 균역법 시행",
+        description:"영조가 양인의 군포 부담을 줄이기 위해 균역법을 시행하였다."
     }
 
     ],
@@ -832,6 +1072,66 @@ window.TIMELINE = {
         year:"1988",
         event:"서울 올림픽 개최",
         description:"대한민국의 국제적 위상이 높아지고 사회 변화가 가속화되었다."
+    },
+
+    {
+        year:"1881",
+        event:"조선 - 조사시찰단 파견",
+        description:"일본의 근대 문물을 살펴보기 위해 조사시찰단이 파견되었다."
+    },
+
+    {
+        year:"1881",
+        event:"조선 - 영선사 파견",
+        description:"청에 영선사를 보내 근대 무기 제조 기술을 배우려 하였다."
+    },
+
+    {
+        year:"1883",
+        event:"조선 - 보빙사 파견",
+        description:"미국에 보빙사를 보내 조미 수호 통상 조약 체결 이후 외교 관계를 다졌다."
+    },
+
+    {
+        year:"1894",
+        event:"조선 - 청일전쟁",
+        description:"조선을 둘러싼 청과 일본의 대립이 전쟁으로 이어졌다."
+    },
+
+    {
+        year:"1896",
+        event:"조선 - 아관파천",
+        description:"고종이 러시아 공사관으로 거처를 옮기며 국내외 정세가 크게 흔들렸다."
+    },
+
+    {
+        year:"1904",
+        event:"대한제국 - 보안회 활동",
+        description:"보안회가 일본의 황무지 개간권 요구에 반대하는 운동을 전개하였다."
+    },
+
+    {
+        year:"1907",
+        event:"대한제국 - 국채 보상 운동",
+        description:"일본에 진 빚을 국민의 힘으로 갚자는 경제적 국권 회복 운동이 전개되었다."
+    },
+
+    {
+        year:"1907",
+        event:"대한제국 - 신민회 창립",
+        description:"신민회가 실력 양성과 독립운동 기지 건설을 추진하였다."
+    },
+
+    {
+        year:"1912",
+        event:"일제강점기 - 토지 조사 사업 시작",
+        description:"일제가 식민 통치의 경제 기반을 마련하기 위해 토지 소유 관계를 조사하였다."
+    },
+
+    {
+        year:"1932",
+        event:"한인애국단 - 윤봉길 의거",
+        description:"윤봉길의 상하이 훙커우 공원 의거로 대한민국 임시정부에 대한 중국의 지원이 확대되었다."
     }
 
 ]
@@ -856,10 +1156,41 @@ function formatTimelineYear(year){
 
 }
 
+function getTimelineSortValue(year){
+
+    const text =
+        String(year);
+
+    const numberMatch =
+        text.match(/\d+/);
+
+    if(!numberMatch){
+        return 0;
+    }
+
+    const value =
+        Number(numberMatch[0]);
+
+    if(text.includes("기원전")){
+        return -value;
+    }
+
+    if(text.includes("세기")){
+        return (value - 1) * 100 + 50;
+    }
+
+    return value;
+
+}
+
 function showTimeline(category){
 
     const events =
-        TIMELINE[category];
+        [...TIMELINE[category]].sort(
+            (a,b)=>
+                getTimelineSortValue(a.year) -
+                getTimelineSortValue(b.year)
+        );
 
     let html =
 
