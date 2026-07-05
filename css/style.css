@@ -3348,12 +3348,6 @@ h1{
 
 }
 
-.compare-mobile-tabbar{
-
-    display:none;
-
-}
-
 .compare-table-wrap{
 
     margin:24px 0 28px;
@@ -3584,125 +3578,6 @@ h1{
     #home-screen .subpage-nav .mobile-nav-toggle{
 
         visibility:hidden;
-
-    }
-
-    body.compare-detail-page{
-
-        padding-bottom:76px;
-
-    }
-
-    body.compare-detail-page .subpage-nav .mobile-nav-toggle{
-
-        display:none;
-
-    }
-
-    body.compare-detail-page .subpage-nav .subpage-brand{
-
-        max-width:100%;
-
-    }
-
-    body.compare-detail-page .subpage-nav.is-open{
-
-        flex-wrap:nowrap;
-
-        gap:0;
-
-        padding-bottom:14px;
-
-    }
-
-    body.compare-detail-page .subpage-nav.is-open .mobile-nav-link{
-
-        display:none;
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar{
-
-        position:fixed;
-
-        left:0;
-
-        right:0;
-
-        bottom:0;
-
-        z-index:1200;
-
-        display:grid;
-
-        grid-template-columns:repeat(3, 1fr);
-
-        gap:0;
-
-        width:100%;
-
-        padding:7px 10px calc(7px + env(safe-area-inset-bottom));
-
-        border-top:1px solid rgba(226,232,240,.95);
-
-        border-radius:0;
-
-        background:rgba(255,255,255,.98);
-
-        box-shadow:0 -8px 22px rgba(15,23,42,.08);
-
-        backdrop-filter:blur(12px);
-
-        -webkit-backdrop-filter:blur(12px);
-
-        transform:none;
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar a{
-
-        display:flex;
-
-        align-items:center;
-
-        justify-content:center;
-
-        min-height:46px;
-
-        padding:8px 6px;
-
-        border-radius:10px;
-
-        color:#1f2937;
-
-        font-size:.82rem;
-
-        font-weight:900;
-
-        text-decoration:none;
-
-        line-height:1.25;
-
-        text-align:center;
-
-        word-break:keep-all;
-
-        transition:.18s ease;
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar a + a{
-
-        border-left:1px solid #edf1f5;
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar a:hover,
-    body.compare-detail-page .compare-mobile-tabbar a:focus-visible{
-
-        background:#f4f7fb;
-
-        color:var(--primary);
 
     }
 
@@ -4092,36 +3967,6 @@ h1{
         max-width:calc(100% - 52px);
 
         font-size:.92rem;
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar{
-
-        left:0;
-
-        right:0;
-
-        bottom:0;
-
-        width:100%;
-
-        border:0;
-
-        border-top:1px solid rgba(226,232,240,.95);
-
-        border-radius:0;
-
-        padding:6px 8px calc(6px + env(safe-area-inset-bottom));
-
-    }
-
-    body.compare-detail-page .compare-mobile-tabbar a{
-
-        min-height:44px;
-
-        padding:7px 3px;
-
-        font-size:.72rem;
 
     }
 
