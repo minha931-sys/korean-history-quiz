@@ -16,6 +16,47 @@ const allEvents =
             )
     );
 
+const MIN_TIMELINE_QUIZ_YEAR = 500;
+
+function getTimelineQuizYearValue(year){
+
+    const text =
+        String(year);
+
+    const numberMatch =
+        text.match(/\d+/);
+
+    if(!numberMatch){
+        return Number.POSITIVE_INFINITY;
+    }
+
+    const value =
+        Number(numberMatch[0]);
+
+    if(text.includes("기원전")){
+        return -value;
+    }
+
+    if(text.includes("세기")){
+        return (value - 1) * 100 + 50;
+    }
+
+    return value;
+
+}
+
+function isTimelineQuizEligible(event){
+
+    return getTimelineQuizYearValue(event.year) >=
+        MIN_TIMELINE_QUIZ_YEAR;
+
+}
+
+const quizEvents =
+    allEvents.filter(
+        isTimelineQuizEligible
+    );
+
 let currentQuestion;
 let currentChoices = [];
 let nextQuestionTimeoutId = null;
@@ -30,11 +71,25 @@ function formatTimelineYear(year){
 
 function getRandomQuestion(){
 
+    if(quizEvents.length === 0){
+
+        quizArea.innerHTML = `
+
+            <p>
+                현재 출제 가능한 연표 문제가 없습니다.
+            </p>
+
+        `;
+
+        return;
+
+    }
+
     const answer =
-        allEvents[
+        quizEvents[
             Math.floor(
                 Math.random() *
-                allEvents.length
+                quizEvents.length
             )
         ];
 
@@ -45,11 +100,21 @@ function getRandomQuestion(){
         .filter(
             item =>
                 item.event !==
-                answer.event
+                answer.event &&
+                isTimelineQuizEligible(item)
         );
 
+    const wrongPool =
+        sameEraEvents.length >= 3
+            ? sameEraEvents
+            : quizEvents.filter(
+                item =>
+                    item.event !==
+                    answer.event
+            );
+
     const wrongs =
-        sameEraEvents
+        wrongPool
         .sort(
             () =>
             Math.random() - 0.5
