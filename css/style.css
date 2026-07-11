@@ -604,12 +604,6 @@ h1{
 
     .action-helper{
 
-        display:none;
-
-    }
-
-    .action-helper-mobile{
-
         display:block;
 
         margin-top:6px;
