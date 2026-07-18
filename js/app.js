@@ -59,6 +59,9 @@ const progressText =
 const progressFill =
     document.querySelector(".progress-fill");
 
+const progressBar =
+    document.getElementById("quiz-progress");
+
 const scoreDisplay =
     document.getElementById("score-display");
 
@@ -376,9 +379,26 @@ const DAILY_MEMORY_KEYWORDS = [
 
 function shuffle(array){
 
-    return [...array].sort(
-        () => Math.random() - 0.5
-    );
+    const result =
+        [...array];
+
+    for(
+        let i = result.length - 1;
+        i > 0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [result[i], result[j]] =
+        [result[j], result[i]];
+
+    }
+
+    return result;
 
 }
 
@@ -552,8 +572,7 @@ function buildQuizSet(quizCount, selectedCategory) {
                   q => q.category === selectedCategory
               );
 
-    return [...pool]
-        .sort(() => Math.random() - 0.5)
+    return shuffle(pool)
         .slice(0, quizCount);
 
 }
@@ -829,6 +848,20 @@ function showQuestion(){
     progressFill.style.width =
         `${progress}%`;
 
+    if(progressBar){
+
+        progressBar.setAttribute(
+            "aria-valuenow",
+            String(Math.round(progress))
+        );
+
+        progressBar.setAttribute(
+            "aria-valuetext",
+            `${currentQuestionIndex + 1}번 문제, 전체 ${totalQuestions}문제`
+        );
+
+    }
+
     explanationBox.style.display =
         "none";
 
@@ -1030,6 +1063,15 @@ function showResult(){
 
 }
 
+    const resultTitle =
+        document.getElementById("result-title");
+
+    if(resultTitle){
+
+        resultTitle.focus();
+
+    }
+
 }
 
 function shareResult(){
@@ -1161,6 +1203,15 @@ function showWrongNote(){
     );
     wrongNoteScreen.classList.add("active");
 
+    const wrongNoteTitle =
+        document.getElementById("wrong-note-title");
+
+    if(wrongNoteTitle){
+
+        wrongNoteTitle.focus();
+
+    }
+
     const wrongQuestions =
         getWrongQuestions();
 
@@ -1190,8 +1241,10 @@ function showWrongNote(){
     `
     <div class="wrong-question-card">
         <button
+            type="button"
             class="delete-wrong-btn"
             data-id="${item.question.id}"
+            aria-label="이 문제를 오답노트에서 삭제"
         >
             ✕
         </button>
@@ -1602,5 +1655,14 @@ ${accuracy}%
 
     content.innerHTML =
         html;
+
+    const analysisTitle =
+        document.getElementById("analysis-title");
+
+    if(analysisTitle){
+
+        analysisTitle.focus();
+
+    }
 
 }

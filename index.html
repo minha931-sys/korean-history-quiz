@@ -418,7 +418,13 @@ gtag('config', 'G-KTT9T9VYDK');
 
             </div>
 
-            <div class="progress-bar">
+            <div class="progress-bar"
+                 id="quiz-progress"
+                 role="progressbar"
+                 aria-label="퀴즈 진행률"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-valuenow="10">
 
                 <div class="progress-fill">
                 </div>
@@ -482,7 +488,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
         <div class="result-card">
 
-            <h2>
+            <h2 id="result-title"
+                tabindex="-1">
                 🎉 결과
             </h2>
 
@@ -592,7 +599,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
     <div class="result-card">
 
-        <h2>
+        <h2 id="wrong-note-title"
+            tabindex="-1">
             📖 오답노트
         </h2>
         <div class="result-actions">
@@ -657,7 +665,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
     <div class="result-card">
 
-        <h2>
+        <h2 id="analysis-title"
+            tabindex="-1">
             📊 학습 분석
         </h2>
 

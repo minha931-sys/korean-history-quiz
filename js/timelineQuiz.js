@@ -89,16 +89,55 @@ function buildChoices(answer){
         ? sameEraEvents
         : fallbackEvents;
 
+    const uniqueWrongEvents = [];
+    const usedEventNames = new Set([answer.event]);
+
+    shuffle(wrongPool).forEach(event => {
+        if(usedEventNames.has(event.event)){
+            return;
+        }
+
+        usedEventNames.add(event.event);
+        uniqueWrongEvents.push(event);
+    });
+
     return shuffle([
         answer,
-        ...shuffle(wrongPool).slice(0, 3)
+        ...uniqueWrongEvents.slice(0, 3)
     ]);
 }
 
-function startTimelineQuiz(){
+function buildTimelineQuizSet(){
     const eligibleEvents = allEvents.filter(isTimelineQuizEligible);
+    const selected = [];
 
-    quizQuestions = shuffle(eligibleEvents).slice(0, TIMELINE_QUIZ_LENGTH);
+    Object.keys(TIMELINE).forEach(category => {
+        const categoryEvents = eligibleEvents.filter(
+            event => event.category === category
+        );
+
+        const categoryQuestion = shuffle(categoryEvents)[0];
+
+        if(categoryQuestion){
+            selected.push(categoryQuestion);
+        }
+    });
+
+    const remainingEvents = eligibleEvents.filter(
+        event => !selected.some(selectedEvent => isSameEvent(selectedEvent, event))
+    );
+
+    return shuffle([
+        ...selected,
+        ...shuffle(remainingEvents).slice(
+            0,
+            Math.max(0, TIMELINE_QUIZ_LENGTH - selected.length)
+        )
+    ]).slice(0, TIMELINE_QUIZ_LENGTH);
+}
+
+function startTimelineQuiz(){
+    quizQuestions = buildTimelineQuizSet();
     currentQuestionIndex = 0;
     score = 0;
     isAnswered = false;
@@ -124,7 +163,13 @@ function renderQuestion(){
             <span>문제 ${currentQuestionIndex + 1} / ${total}</span>
             <span>현재 ${score}점</span>
         </div>
-        <div class="progress-bar" aria-hidden="true">
+        <div class="progress-bar"
+             role="progressbar"
+             aria-label="연표 퀴즈 진행률"
+             aria-valuemin="0"
+             aria-valuemax="100"
+             aria-valuenow="${progress}"
+             aria-valuetext="${currentQuestionIndex + 1}번 문제, 전체 ${total}문제">
             <div class="progress-fill" style="width:${progress}%"></div>
         </div>
         <p class="timeline-quiz-era">${answer.category}</p>

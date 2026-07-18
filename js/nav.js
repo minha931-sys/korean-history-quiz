@@ -15,6 +15,28 @@ function setupMobileNav(){
         toggle.dataset.navReady =
             "true";
 
+        const closeMenu = (shouldFocusToggle = false) => {
+
+            nav.classList.remove("is-open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                "메뉴 열기"
+            );
+
+            if(shouldFocusToggle){
+
+                toggle.focus();
+
+            }
+
+        };
+
         toggle.addEventListener("click", () => {
 
             const isOpen =
@@ -29,6 +51,25 @@ function setupMobileNav(){
                 "aria-label",
                 isOpen ? "메뉴 닫기" : "메뉴 열기"
             );
+
+        });
+
+        nav.querySelectorAll(".mobile-nav-link").forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => closeMenu()
+            );
+
+        });
+
+        nav.addEventListener("keydown", event => {
+
+            if(event.key === "Escape" && nav.classList.contains("is-open")){
+
+                closeMenu(true);
+
+            }
 
         });
 
