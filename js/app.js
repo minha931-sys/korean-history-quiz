@@ -659,9 +659,14 @@ function selectAnswer(index){
     const correctIndex =
         question.answer;
 
-    choiceButtons.forEach(btn=>{
+    choiceButtons.forEach((btn, choiceIndex)=>{
 
         btn.disabled = true;
+
+        btn.setAttribute(
+            "aria-pressed",
+            String(choiceIndex === index)
+        );
 
     });
 
@@ -745,8 +750,16 @@ function selectAnswer(index){
     explanationDiv.className =
         "inline-explanation";
 
-    explanationDiv.innerHTML =
-        `📖 ${question.explanation}`;
+    explanationDiv.setAttribute(
+        "role",
+        "status"
+    );
+
+    explanationDiv.tabIndex =
+        -1;
+
+    explanationDiv.textContent =
+        `해설: ${question.explanation}`;
 
     choiceButtons[correctIndex]
         .insertAdjacentElement(
@@ -772,6 +785,8 @@ function selectAnswer(index){
     nextBtn.style.display =
         "block";
 
+    explanationDiv.focus();
+
 }
 
 function showQuestion(){
@@ -792,6 +807,9 @@ function showQuestion(){
 
     questionText.textContent =
         question.question;
+
+    questionText.tabIndex =
+        -1;
 
     const totalQuestions =
         selectedQuestions.length;
@@ -833,8 +851,14 @@ function showQuestion(){
             button.textContent =
                 question.choices[index];
 
+            button.removeAttribute(
+                "aria-pressed"
+            );
+
         }
     );
+
+    questionText.focus();
 
 }
 

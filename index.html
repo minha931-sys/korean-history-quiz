@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <link rel="canonical"
       href="https://hanguksaquiz.com/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="한국사 10분 챌린지 편집팀">
 <meta name="naver-site-verification" content="7293994dfed5e5390eaa2c5853ff8b3e47450ed4" />
 
 <title>
@@ -38,7 +39,7 @@ gtag('config', 'G-KTT9T9VYDK');
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "xd3m0awhwj");
 </script>
-<link rel="stylesheet" href="css/style.css?v=20260629-mobile-menu-fixed-links">
+<link rel="stylesheet" href="css/style.css?v=20260718-editorial-standard">
 <link rel="stylesheet" href="css/quiz.css">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
@@ -81,6 +82,7 @@ gtag('config', 'G-KTT9T9VYDK');
 </head>
 <body>
 <div class="container">
+<main id="main-content">
 
     <!-- 홈 화면 -->
 
@@ -191,7 +193,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
                 </div>
 
-                <button id="start-btn"
+                <button type="button"
+                        id="start-btn"
                         class="primary-btn">
 
                     한국사 퀴즈 바로 풀기
@@ -264,28 +267,32 @@ gtag('config', 'G-KTT9T9VYDK');
 
                 <div class="tool-grid">
 
-                    <button id="wrong-note-btn"
+                    <button type="button"
+                            id="wrong-note-btn"
                             class="secondary-btn tool-btn">
 
                         📖 오답노트
 
                     </button>
 
-                    <button id="analysis-btn"
+                    <button type="button"
+                            id="analysis-btn"
                         class="secondary-btn tool-btn">
 
                         📊 학습 분석
 
                     </button>
 
-                    <button id="timeline-btn"
+                    <button type="button"
+                            id="timeline-btn"
                         class="timeline-btn tool-btn">
 
                         한국사 핵심 연표
 
                     </button>
 
-                    <button id="compare-btn"
+                    <button type="button"
+                            id="compare-btn"
                         class="timeline-btn tool-btn">
 
                         한국사 비교 정리
@@ -350,6 +357,15 @@ gtag('config', 'G-KTT9T9VYDK');
                     처음 방문했다면 전체 문제로 실력을 점검한 뒤, 오답노트와 학습 분석을 확인하고 약한 시대의 연표나 비교 정리로 이어서 복습해보세요.
                 </p>
 
+            </section>
+
+            <section class="home-content-standard"
+                     aria-labelledby="home-content-standard-title">
+                <div>
+                    <h2 id="home-content-standard-title">직접 만든 문제와 확인 가능한 참고 자료</h2>
+                    <p>문제와 해설은 직접 작성하며, 비교 정리는 국사편찬위원회 등 공공 역사 자료와 대조해 참고 자료와 확인일을 표시합니다.</p>
+                </div>
+                <a href="pages/editorial-policy.html">콘텐츠 제작·검수 기준</a>
             </section>
 
             <p class="storage-notice">
@@ -418,10 +434,10 @@ gtag('config', 'G-KTT9T9VYDK');
             
             <div class="choices">
 
-                <button class="choice-btn"></button>
-                <button class="choice-btn"></button>
-                <button class="choice-btn"></button>
-                <button class="choice-btn"></button>
+                <button type="button" class="choice-btn"></button>
+                <button type="button" class="choice-btn"></button>
+                <button type="button" class="choice-btn"></button>
+                <button type="button" class="choice-btn"></button>
 
             </div>
 
@@ -429,7 +445,8 @@ gtag('config', 'G-KTT9T9VYDK');
                  class="explanation-box">
             </div>
 
-            <button id="next-btn"
+            <button type="button"
+                    id="next-btn"
                     class="primary-btn"
                     style="display:none; margin-bottom:20px;">
 
@@ -479,14 +496,16 @@ gtag('config', 'G-KTT9T9VYDK');
 
             <div class="result-actions">
 
-                <button id="restart-btn"
+                <button type="button"
+                        id="restart-btn"
                     class="primary-btn">
 
                     다시 도전
 
                 </button>
 
-                <button id="retry-wrong-btn"
+                <button type="button"
+                        id="retry-wrong-btn"
                     class="secondary-btn"
                     style="display:none;">
 
@@ -494,7 +513,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
     </button>
 
-    <button id="share-btn"
+    <button type="button"
+            id="share-btn"
             class="secondary-btn">
 
         결과 공유
@@ -520,22 +540,26 @@ gtag('config', 'G-KTT9T9VYDK');
 
                 <div class="result-tool-grid">
 
-                    <button id="result-wrong-note-btn"
+                    <button type="button"
+                            id="result-wrong-note-btn"
                             class="secondary-btn result-tool-btn">
                         오답노트
                     </button>
 
-                    <button id="result-analysis-btn"
+                    <button type="button"
+                            id="result-analysis-btn"
                             class="secondary-btn result-tool-btn">
                         학습 분석
                     </button>
 
-                    <button id="result-timeline-btn"
+                    <button type="button"
+                            id="result-timeline-btn"
                             class="secondary-btn result-tool-btn">
                         한국사 핵심 연표
                     </button>
 
-                    <button id="result-compare-btn"
+                    <button type="button"
+                            id="result-compare-btn"
                             class="secondary-btn result-tool-btn">
                         비교 정리
                     </button>
@@ -573,7 +597,8 @@ gtag('config', 'G-KTT9T9VYDK');
         </h2>
         <div class="result-actions">
 
-            <button id="study-wrong-btn"
+            <button type="button"
+                    id="study-wrong-btn"
                     class="primary-btn">
 
                 📚 틀린 문제만 랜덤으로 풀기
@@ -591,13 +616,15 @@ gtag('config', 'G-KTT9T9VYDK');
                     
             
 
-            <button id="clear-note-btn"
+            <button type="button"
+                    id="clear-note-btn"
                     class="secondary-btn">
                 오답노트 초기화
 
             </button>
 
-            <button id="back-home-btn"
+            <button type="button"
+                    id="back-home-btn"
                     class="primary-btn">
 
                 홈으로
@@ -647,7 +674,8 @@ gtag('config', 'G-KTT9T9VYDK');
 
         <div class="result-actions">
 
-            <button id="analysis-home-btn"
+            <button type="button"
+                    id="analysis-home-btn"
                     class="primary-btn">
 
                 홈으로
@@ -659,6 +687,7 @@ gtag('config', 'G-KTT9T9VYDK');
     </div>
 
 </section>
+</main>
 
 <footer class="site-footer">
 
@@ -674,6 +703,10 @@ gtag('config', 'G-KTT9T9VYDK');
         한국사 연표
     </a>
 
+    <a href="pages/editorial-policy.html">
+        콘텐츠 기준
+    </a>
+
     <a href="pages/privacy.html">
         개인정보처리방침
     </a>
@@ -685,7 +718,6 @@ gtag('config', 'G-KTT9T9VYDK');
     <a href="pages/contact.html">
         문의하기
     </a>
-
 </footer>
 
 

@@ -45,7 +45,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"392",
+        year:"391",
         event:"고구려 - 광개토대왕 즉위",
         description:"광개토대왕이 즉위하여 정복 활동을 본격적으로 전개하였다."
     },
@@ -64,8 +64,8 @@ window.TIMELINE = {
 
     {
         year:"493",
-        event:"신라 - 결혼 동맹",
-        description:"소지왕이 고구려와 혼인 관계를 맺었다."
+        event:"백제·신라 - 혼인 동맹",
+        description:"백제 동성왕이 신라 왕녀와 혼인하여 나제 동맹을 강화하였다."
     },
 
     {
@@ -82,14 +82,14 @@ window.TIMELINE = {
 
     {
         year:"551",
-        event:"신라 - 한강 하류 차지",
-        description:"진흥왕이 한강 유역을 확보하였다."
+        event:"신라 - 한강 상류 차지",
+        description:"진흥왕이 백제 성왕과 함께 고구려를 공격한 뒤 한강 상류 지역을 확보하였다."
     },
 
     {
         year:"553",
-        event:"신라 - 한강 상류 차지",
-        description:"진흥왕이 한강 유역 전체를 장악하여 세력을 크게 넓혔다."
+        event:"신라 - 한강 하류 차지",
+        description:"진흥왕이 백제가 차지했던 한강 하류 지역까지 확보하여 한강 유역 전체를 장악하였다."
     },
 
     {
@@ -211,7 +211,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"689",
+        year:"687",
         event:"신라 - 관료전 지급",
         description:"신문왕이 귀족 세력을 약화시키기 위해 시행하였다."
     },
@@ -247,13 +247,13 @@ window.TIMELINE = {
     },
 
     {
-        year:"756",
+        year:"751",
         event:"신라 - 김대성, 불국사·석굴암 창건",
-        description:"통일신라 불교 문화의 대표 유산이 건립되었다."
+        description:"김대성이 불국사와 석굴암의 건립을 시작하였다."
     },
 
     {
-        year:"785",
+        year:"818",
         event:"발해 - 선왕 즉위",
         description:"발해의 전성기를 이끌어 해동성국이라 불렸다."
     },
@@ -261,7 +261,7 @@ window.TIMELINE = {
     {
         year:"788",
         event:"신라 - 독서삼품과 실시",
-        description:"원성이 유교 경전 이해 수준에 따라 인재를 선발하고자 하였다."
+        description:"원성왕이 유교 경전 이해 수준에 따라 인재를 등용하고자 하였다."
     },
 
     {
@@ -272,8 +272,8 @@ window.TIMELINE = {
 
     {
         year:"851",
-        event:"장보고 - 청해진 장악 기반 상실",
-        description:"장보고 사후 청해진 세력이 약화되며 신라 해상 통제력도 흔들렸다."
+        event:"신라 - 청해진 폐지",
+        description:"신라 조정이 청해진 주민을 벽골군으로 옮기고 청해진을 폐지하였다."
     },
 
     {
@@ -284,8 +284,8 @@ window.TIMELINE = {
 
     {
         year:"892",
-        event:"후백제 - 견훤, 완산주 점거",
-        description:"견훤이 완산주를 중심으로 세력을 키우며 후백제 건국 기반을 다졌다."
+        event:"견훤 - 무진주 점거",
+        description:"견훤이 무진주를 차지하며 후백제 건국의 기반을 마련하였다."
     },
 
     {
@@ -308,14 +308,14 @@ window.TIMELINE = {
 
     {
         year:"904",
-        event:"후고구려 - 마진 건국",
-        description:"궁예가 국호를 마진으로 변경하였다."
+        event:"후고구려 - 국호를 마진으로 변경",
+        description:"궁예가 국호를 마진으로 바꾸고 연호를 무태라 하였다."
     },
 
     {
         year:"911",
-        event:"후고구려 - 태봉 건국",
-        description:"궁예가 국호를 태봉으로 변경하였다."
+        event:"마진 - 국호를 태봉으로 변경",
+        description:"궁예가 국호를 태봉으로 바꾸고 연호를 수덕만세라 하였다."
     },
 
     {
@@ -361,7 +361,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"687",
+        year:"689",
         event:"신라 - 녹읍 폐지",
         description:"신문왕이 귀족의 경제 기반을 약화하고 왕권을 강화하려 하였다."
     },
@@ -385,7 +385,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"818",
+        year:"822",
         event:"신라 - 김헌창의 난",
         description:"왕위 계승 문제에 불만을 품은 김헌창이 반란을 일으켰다."
     },
@@ -449,7 +449,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"981",
+        year:"982",
         event:"고려 - 시무 28조",
         description:"최승로가 성종에게 개혁안을 제시하였다."
     },
@@ -491,7 +491,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"1136",
+        year:"1145",
         event:"고려 - 『삼국사기』 편찬",
         description:"김부식 등이 유교적 관점에서 우리 역사를 정리하였다."
     },
@@ -645,7 +645,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"1401",
+        year:"1413",
         event:"조선 - 호패법 실시",
         description:"태종이 인구를 파악하기 위해 시행하였다."
     },
@@ -717,9 +717,9 @@ window.TIMELINE = {
     },
 
     {
-        year:"1608",
+        year:"1635",
         event:"조선 - 영정법 시행",
-        description:"광해군 때 토지 1결당 쌀 4두를 거두는 제도가 실시되었다."
+        description:"인조 때 전세를 토지 1결당 쌀 4~6두로 고정하여 거두도록 하였다."
     },
 
     {
@@ -741,9 +741,9 @@ window.TIMELINE = {
     },
 
     {
-        year:"1675",
-        event:"조선 - 예송 논쟁 본격화",
-        description:"상복 기간 문제를 둘러싸고 서인과 남인의 대립이 심화되었다."
+        year:"1659~1674",
+        event:"조선 - 두 차례 예송",
+        description:"효종과 효종비의 상복 기간을 둘러싸고 서인과 남인이 두 차례 대립하였다."
     },
 
     {
@@ -1123,7 +1123,7 @@ window.TIMELINE = {
     },
 
     {
-        year:"1912",
+        year:"1910",
         event:"일제강점기 - 토지 조사 사업 시작",
         description:"일제가 식민 통치의 경제 기반을 마련하기 위해 토지 소유 관계를 조사하였다."
     },
@@ -1244,7 +1244,56 @@ function showTimeline(category){
     content.innerHTML =
         html;
 
+    const activeTab =
+        [...tabs].find(
+            tab =>
+                tab.dataset.category === category
+        );
+
+    if(activeTab && activeTab.id){
+
+        content.setAttribute(
+            "aria-labelledby",
+            activeTab.id
+        );
+
+    }
+
 }
+
+}
+
+function activateTimelineTab(tab, moveFocus = false){
+
+    tabs.forEach(item => {
+
+        const isActive =
+            item === tab;
+
+        item.classList.toggle(
+            "active",
+            isActive
+        );
+
+        item.setAttribute(
+            "aria-selected",
+            String(isActive)
+        );
+
+        item.tabIndex =
+            isActive ? 0 : -1;
+
+    });
+
+    showTimeline(
+        tab.dataset.category
+    );
+
+    if(moveFocus){
+
+        tab.focus();
+
+    }
 
 }
 
@@ -1254,19 +1303,60 @@ tabs.forEach(tab => {
         "click",
         ()=>{
 
-            tabs.forEach(
-                t =>
-                t.classList.remove(
-                    "active"
-                )
+            activateTimelineTab(
+                tab
             );
 
-            tab.classList.add(
-                "active"
-            );
+        }
+    );
 
-            showTimeline(
-                tab.dataset.category
+    tab.addEventListener(
+        "keydown",
+        event => {
+
+            const tabList =
+                [...tabs];
+
+            const currentIndex =
+                tabList.indexOf(tab);
+
+            let nextIndex =
+                currentIndex;
+
+            if(event.key === "ArrowRight"){
+
+                nextIndex =
+                    (currentIndex + 1) % tabList.length;
+
+            }
+            else if(event.key === "ArrowLeft"){
+
+                nextIndex =
+                    (currentIndex - 1 + tabList.length) % tabList.length;
+
+            }
+            else if(event.key === "Home"){
+
+                nextIndex = 0;
+
+            }
+            else if(event.key === "End"){
+
+                nextIndex =
+                    tabList.length - 1;
+
+            }
+            else{
+
+                return;
+
+            }
+
+            event.preventDefault();
+
+            activateTimelineTab(
+                tabList[nextIndex],
+                true
             );
 
         }

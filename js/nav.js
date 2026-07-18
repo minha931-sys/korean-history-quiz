@@ -36,16 +36,59 @@ function setupMobileNav(){
 
 }
 
+function setupSkipLink(){
+
+    const main =
+        document.querySelector("main");
+
+    if(!main){
+        return;
+    }
+
+    if(!main.id){
+        main.id =
+            "main-content";
+    }
+
+    if(document.querySelector(".skip-link")){
+        return;
+    }
+
+    const skipLink =
+        document.createElement("a");
+
+    skipLink.className =
+        "skip-link";
+
+    skipLink.href =
+        `#${main.id}`;
+
+    skipLink.textContent =
+        "본문 바로가기";
+
+    document.body.prepend(
+        skipLink
+    );
+
+}
+
+function setupSiteNavigation(){
+
+    setupSkipLink();
+    setupMobileNav();
+
+}
+
 if(document.readyState === "loading"){
 
     document.addEventListener(
         "DOMContentLoaded",
-        setupMobileNav
+        setupSiteNavigation
     );
 
 }
 else{
 
-    setupMobileNav();
+    setupSiteNavigation();
 
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <link rel="canonical"
@@ -8,18 +8,21 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
+<meta name="author" content="한국사 10분 챌린지 편집팀">
+<meta name="date" content="2026-07-18">
+
 <title>
 한국사 핵심 연표 | 시대별 사건 흐름 정리 | 한국사 10분 챌린지
 </title>
 
 <meta name="description"
-content="고조선부터 대한민국 정부 수립까지 주요 사건을 시대별 흐름으로 정리한 한국사 핵심 연표입니다. 한능검·수능 대비에 필요한 사건의 순서와 연결을 확인하세요.">
+content="고조선부터 대한민국 정부 수립과 민주화 과정까지 주요 사건을 시대별 흐름으로 정리한 한국사 핵심 연표입니다. 한능검·수능 대비에 필요한 사건의 순서와 연결을 확인하세요.">
 
 <meta property="og:title"
       content="한국사 핵심 연표 | 시대별 사건 흐름 정리">
 
 <meta property="og:description"
-      content="고조선부터 대한민국 정부 수립까지 주요 사건을 시대별로 정리한 무료 한국사 연표입니다. 한능검과 수능 한국사 학습에 필요한 핵심 사건을 한눈에 확인할 수 있습니다.">
+      content="고조선부터 대한민국 정부 수립과 민주화 과정까지 주요 사건을 시대별로 정리한 한국사 연표입니다. 한능검과 수능 한국사 학습에 필요한 핵심 흐름을 확인할 수 있습니다.">
 
 <meta property="og:url"
       content="https://hanguksaquiz.com/pages/timeline.html">
@@ -53,7 +56,7 @@ gtag('config', 'G-KTT9T9VYDK');
 })(window, document, "clarity", "script", "xd3m0awhwj");
 </script>
 <link rel="stylesheet"
-      href="../css/style.css?v=20260629-mobile-menu-fixed-links">
+      href="../css/style.css?v=20260718-editorial-standard">
 <link rel="stylesheet"
       href="../css/quiz.css">
 
@@ -64,12 +67,16 @@ gtag('config', 'G-KTT9T9VYDK');
   "@context":"https://schema.org",
   "@graph":[
     {
-      "@type":"WebPage",
+      "@type":["WebPage","LearningResource"],
       "@id":"https://hanguksaquiz.com/pages/timeline.html#webpage",
       "url":"https://hanguksaquiz.com/pages/timeline.html",
       "name":"한국사 핵심 연표",
-      "description":"고조선부터 대한민국 정부 수립까지 주요 사건을 시대별 흐름으로 정리한 한국사 핵심 연표입니다.",
+      "description":"고조선부터 대한민국 정부 수립과 민주화 과정까지 주요 사건을 시대별 흐름으로 정리한 한국사 핵심 연표입니다.",
       "inLanguage":"ko-KR",
+      "educationalUse":"한국사 연표 학습",
+      "isAccessibleForFree":true,
+      "dateModified":"2026-07-18",
+      "author":{"@type":"Organization","name":"한국사 10분 챌린지 편집팀","url":"https://hanguksaquiz.com/pages/about.html"},
       "isPartOf":{"@id":"https://hanguksaquiz.com/#website"}
     },
     {
@@ -103,6 +110,7 @@ gtag('config', 'G-KTT9T9VYDK');
 <a href="timeline.html">핵심 연표</a>
 
 </nav>
+<main id="main-content">
 <div class="result-card timeline-page-card">
 
 <div class="timeline-header">
@@ -113,12 +121,17 @@ gtag('config', 'G-KTT9T9VYDK');
 
 <p class="timeline-intro">
 
-고조선부터 대한민국 정부 수립까지의 주요 사건을
+고조선부터 대한민국 정부 수립과 민주화 과정까지의 주요 사건을
 시대별로 정리한 무료 한국사 연표입니다.
 
 한국사능력검정시험(한능검)과 수능 한국사 학습에
 필요한 핵심 사건을 한눈에 확인할 수 있습니다.
 
+</p>
+
+<p class="content-meta">
+운영·편집: 한국사 10분 챌린지 편집팀 · 마지막 내용 확인: 2026년 7월 18일 ·
+<a href="editorial-policy.html">콘텐츠 제작·검수 기준</a>
 </p>
 
 <div class="result-actions">
@@ -130,6 +143,8 @@ gtag('config', 'G-KTT9T9VYDK');
     📝 한국사 연표 퀴즈
 
     </a>
+
+</div>
 
 </div>
 
@@ -183,37 +198,67 @@ gtag('config', 'G-KTT9T9VYDK');
 
 </section>
 
-<div class="timeline-tabs">
+<div class="timeline-tabs" role="tablist" aria-label="시대 선택">
 
-<button class="timeline-tab active"
+<button type="button"
+        class="timeline-tab active"
+        id="timeline-tab-ancient"
+        role="tab"
+        aria-selected="true"
+        aria-controls="timeline-content"
+        tabindex="0"
         data-category="고조선·삼국">
 
 고조선·삼국
 
 </button>
 
-<button class="timeline-tab"
+<button type="button"
+        class="timeline-tab"
+        id="timeline-tab-unified"
+        role="tab"
+        aria-selected="false"
+        aria-controls="timeline-content"
+        tabindex="-1"
         data-category="통일신라·발해">
 
 통일신라·발해
 
 </button>
 
-<button class="timeline-tab"
+<button type="button"
+        class="timeline-tab"
+        id="timeline-tab-goryeo"
+        role="tab"
+        aria-selected="false"
+        aria-controls="timeline-content"
+        tabindex="-1"
         data-category="고려">
 
 고려
 
 </button>
 
-<button class="timeline-tab"
+<button type="button"
+        class="timeline-tab"
+        id="timeline-tab-joseon"
+        role="tab"
+        aria-selected="false"
+        aria-controls="timeline-content"
+        tabindex="-1"
         data-category="조선">
 
 조선
 
 </button>
 
-<button class="timeline-tab"
+<button type="button"
+        class="timeline-tab"
+        id="timeline-tab-modern"
+        role="tab"
+        aria-selected="false"
+        aria-controls="timeline-content"
+        tabindex="-1"
         data-category="근현대">
 
 근현대
@@ -222,12 +267,93 @@ gtag('config', 'G-KTT9T9VYDK');
 
 </div>
 
-<div id="timeline-content">
+<div id="timeline-content"
+     role="tabpanel"
+     aria-labelledby="timeline-tab-ancient"
+     aria-live="polite"
+     tabindex="0">
+<p class="timeline-loading-note">세부 연표가 표시되지 않으면 아래의 시대별 핵심 전환점 요약으로 흐름을 먼저 확인해 주세요.</p>
 </div>
+
+<section class="timeline-turning-points"
+         aria-labelledby="timeline-turning-points-title">
+
+<p class="timeline-study-guide-label">시대별 핵심 전환점</p>
+
+<h2 id="timeline-turning-points-title">
+연도만 외우지 않고 변화의 방향을 잡는 요약
+</h2>
+
+<p>
+아래 요약은 연표 전체에서 먼저 기억할 흐름을 골라 원인과 결과로 연결한 내용입니다.
+위의 시대 탭에서 세부 사건을 확인한 뒤, 각 시대의 마지막 변화가 다음 시대로 어떻게 이어지는지 설명해보세요.
+</p>
+
+<div class="timeline-turning-points-grid">
+
+<article>
+<h3>고조선·삼국</h3>
+<ol>
+<li><strong>기원전 108년</strong> 고조선 멸망 뒤 여러 정치 세력이 성장했습니다.</li>
+<li><strong>4세기</strong> 삼국은 율령·불교·교육 제도를 정비하며 중앙 집권 국가로 발전했습니다.</li>
+<li><strong>427년</strong> 고구려의 평양 천도는 남진과 한강 유역 경쟁을 본격화했습니다.</li>
+<li><strong>551~553년</strong> 신라는 한강 상류에 이어 하류까지 확보해 성장 기반을 넓혔습니다.</li>
+<li><strong>660~676년</strong> 백제·고구려 멸망과 나당 전쟁을 거쳐 신라 중심의 통일이 이루어졌습니다.</li>
+</ol>
+</article>
+
+<article>
+<h3>통일신라·발해</h3>
+<ol>
+<li><strong>676년</strong> 신라가 당 세력을 몰아낸 뒤 통치 체제를 정비했습니다.</li>
+<li><strong>698년</strong> 대조영이 발해를 세우며 남북국의 흐름이 형성됐습니다.</li>
+<li><strong>788년</strong> 독서삼품과는 유교 경전 능력을 관리 등용에 반영하려는 시도였습니다.</li>
+<li><strong>818년 이후</strong> 선왕 때 발해가 전성기를 맞아 해동성국으로 불렸습니다.</li>
+<li><strong>9세기 말</strong> 신라의 지방 통제가 약해지며 호족과 후삼국 세력이 성장했습니다.</li>
+</ol>
+</article>
+
+<article>
+<h3>고려</h3>
+<ol>
+<li><strong>918~936년</strong> 왕건의 고려 건국과 후삼국 통일로 새 왕조가 자리 잡았습니다.</li>
+<li><strong>광종·성종 대</strong> 과거제와 통치 조직 정비를 통해 왕권과 중앙 집권이 강화됐습니다.</li>
+<li><strong>11세기</strong> 거란 침입을 막아내고 북방 방어 체제를 다듬었습니다.</li>
+<li><strong>1170년 이후</strong> 무신 정권과 농민·천민의 저항으로 지배 질서가 흔들렸습니다.</li>
+<li><strong>13~14세기</strong> 몽골 침입과 원 간섭기를 거쳐 공민왕의 개혁, 위화도 회군, 조선 건국으로 이어졌습니다.</li>
+</ol>
+</article>
+
+<article>
+<h3>조선</h3>
+<ol>
+<li><strong>1392년 이후</strong> 유교 정치 이념에 따라 중앙과 지방의 통치 체제를 정비했습니다.</li>
+<li><strong>15세기</strong> 훈민정음 창제와 과학 기술·편찬 사업으로 국가 문화 기반이 넓어졌습니다.</li>
+<li><strong>16세기</strong> 사림의 성장과 사화, 붕당 형성으로 정치 운영 방식이 변했습니다.</li>
+<li><strong>1592~1637년</strong> 왜란과 호란을 겪으며 군사·외교·사회 질서가 크게 흔들렸습니다.</li>
+<li><strong>조선 후기</strong> 수취 제도 개편과 탕평책이 추진됐지만 세도 정치와 농민 봉기로 체제 모순이 커졌습니다.</li>
+</ol>
+</article>
+
+<article>
+<h3>근현대</h3>
+<ol>
+<li><strong>1876년</strong> 강화도 조약 이후 개항과 개화 정책이 본격화됐습니다.</li>
+<li><strong>1882~1894년</strong> 임오군란·갑신정변·동학 농민 운동을 거치며 개혁 요구가 커졌습니다.</li>
+<li><strong>1905~1910년</strong> 국권 침탈에 맞서 의병과 애국 계몽 운동이 전개됐습니다.</li>
+<li><strong>1919년</strong> 3·1 운동을 계기로 대한민국 임시정부가 수립되고 독립운동이 확대됐습니다.</li>
+<li><strong>1945~1948년</strong> 광복 뒤 분단 과정을 거쳐 대한민국 정부가 수립됐습니다.</li>
+</ol>
+</article>
+
+</div>
+
+</section>
 
 <div class="result-actions">
 
 <button
+type="button"
 onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
 class="primary-btn">
 
@@ -315,6 +441,7 @@ class="primary-btn">
 <div class="result-actions timeline-review-actions">
 
 <button
+type="button"
 onclick="location.href='timeline-quiz.html'"
 class="secondary-btn">
 
@@ -323,6 +450,7 @@ class="secondary-btn">
 </button>
 
 <button
+type="button"
 onclick="location.href='compare/index.html'"
 class="primary-btn">
 
@@ -334,7 +462,18 @@ class="primary-btn">
 
 </section>
 
+<section class="content-sources" aria-labelledby="timeline-sources-title">
+<h2 id="timeline-sources-title">참고 자료</h2>
+<p>사건 연도와 설명은 아래 공공 역사 자료를 우선 대조했으며, 학습에 맞게 짧게 다시 썼습니다.</p>
+<ul>
+<li><a href="https://contents.history.go.kr/" rel="noopener noreferrer">국사편찬위원회 우리역사넷</a></li>
+<li><a href="https://db.history.go.kr/" rel="noopener noreferrer">국사편찬위원회 한국사데이터베이스</a></li>
+<li><a href="https://encykorea.aks.ac.kr/" rel="noopener noreferrer">한국학중앙연구원 한국민족문화대백과사전</a></li>
+</ul>
+</section>
+
 </div>
+</main>
 
 
 <footer class="site-footer">
@@ -346,6 +485,8 @@ class="primary-btn">
     <a href="terms.html">이용약관</a>
     <a href="contact.html">문의하기</a>
 
+
+    <a href="editorial-policy.html">콘텐츠 기준</a>
 </footer>
 </div>
 
