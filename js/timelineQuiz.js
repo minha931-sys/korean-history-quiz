@@ -47,9 +47,11 @@ function getTimelineQuizYearValue(year){
 }
 
 function isTimelineQuizEligible(event){
-    return Number.isFinite(
-        getTimelineQuizYearValue(event.year)
-    );
+    const yearValue =
+        getTimelineQuizYearValue(event.year);
+
+    return Number.isFinite(yearValue) &&
+        yearValue >= 500;
 }
 
 function shuffle(items){

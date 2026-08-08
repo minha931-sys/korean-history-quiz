@@ -908,7 +908,7 @@ window.TIMELINE = {
 
     {
         year:"1896",
-        event:"대한제국 - 독립협회 창립",
+        event:"조선 - 독립협회 창립",
         description:"서재필 등이 독립협회를 조직하였다."
     },
 
