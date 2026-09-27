@@ -1,0 +1,93 @@
+.partner-books {
+    margin: 28px 0;
+    padding: 20px;
+    border: 1px solid #dce3ee;
+    border-radius: 16px;
+    background: #f8faff;
+    color: #172033;
+    text-align: left;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+.partner-books .partner-books-disclosure {
+    margin: 0 0 16px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #dce3ee;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.65;
+}
+.partner-books-disclosure strong {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 1px 6px;
+    border: 1px solid #64748b;
+    border-radius: 4px;
+    color: #334155;
+    font-size: 12px;
+}
+.partner-books-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.partner-books .partner-books-cover {
+    display: block;
+    flex: 0 0 96px;
+    width: 96px;
+    height: 120px;
+    margin: 0;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 6px;
+}
+.partner-books .partner-books-cover[hidden] { display: none; }
+.partner-books-copy { min-width: 0; }
+.partner-books .partner-books-label {
+    margin: 0 0 5px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.partner-books .partner-books-title {
+    margin: 0;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.partner-books .partner-books-subtitle {
+    margin: 5px 0 12px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.partner-books .partner-books-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #244c84;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.partner-books .partner-books-link:hover { background: #183a69; }
+.partner-books .partner-books-link:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}
+@media (max-width: 480px) {
+    .partner-books { padding: 16px; margin: 24px 0; }
+    .partner-books-product { gap: 12px; align-items: flex-start; }
+    .partner-books .partner-books-cover { flex-basis: 68px; width: 68px; height: 92px; }
+    .partner-books .partner-books-title { font-size: 15px; }
+    .partner-books .partner-books-link { font-size: 13px; padding: 10px 12px; }
+}
+@media print { .partner-books { display: none; } }
