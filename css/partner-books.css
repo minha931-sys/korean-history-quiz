@@ -1,101 +1,56 @@
 .partner-books {
-    margin: 28px 0;
-    padding: 20px;
-    border: 1px solid #dce3ee;
-    border-radius: 16px;
-    background: #f8faff;
+    max-width: 300px;
+    margin: 28px auto;
+    padding: 10px;
+    border: 1px solid #e0e7f0;
+    border-radius: 12px;
+    background: #fff;
     color: #172033;
     text-align: left;
     word-break: keep-all;
     overflow-wrap: anywhere;
 }
-.partner-books .partner-books-disclosure {
-    margin: 0 0 16px;
-    padding: 0 0 12px;
-    border-bottom: 1px solid #dce3ee;
-    color: #475569;
-    font-size: 13px;
-    line-height: 1.65;
-}
-.partner-books-disclosure strong {
-    display: inline-block;
-    margin-right: 6px;
-    padding: 1px 6px;
-    border: 1px solid #64748b;
-    border-radius: 4px;
-    color: #334155;
-    font-size: 12px;
-}
-.partner-books-product {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.partner-books .partner-books-cover {
-    display: block;
-    flex: 0 0 96px;
-    width: 96px;
-    height: 120px;
-    margin: 0;
-    object-fit: contain;
-    background: #fff;
-    border-radius: 6px;
-}
-.partner-books .partner-books-cover[hidden] { display: none; }
-.partner-books-copy { min-width: 0; }
-.partner-books .partner-books-label {
-    margin: 0 0 5px;
-    color: #475569;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.5;
-}
-.partner-books .partner-books-title {
-    margin: 0;
-    color: #172033;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.5;
-}
-.partner-books .partner-books-subtitle {
-    margin: 5px 0 12px;
-    color: #475569;
-    font-size: 13px;
-    line-height: 1.6;
-}
 .partner-books .partner-books-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-height: 44px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background: #244c84;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5;
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    color: #334155;
     text-decoration: none;
 }
-.partner-books .partner-books-link:hover { background: #183a69; }
 .partner-books .partner-books-link:focus-visible {
     outline: 3px solid #1d4ed8;
     outline-offset: 3px;
 }
-@media (max-width: 480px) {
-    .partner-books { padding: 16px; margin: 24px 0; }
-    .partner-books-product { gap: 12px; align-items: flex-start; }
-    .partner-books .partner-books-cover { flex-basis: 68px; width: 68px; height: 92px; }
-    .partner-books .partner-books-title { font-size: 15px; }
-    .partner-books .partner-books-link { font-size: 13px; padding: 10px 12px; }
+.partner-books .partner-books-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #fff;
+}
+.partner-books .partner-books-disclosure {
+    margin: 8px 2px 0;
+    padding: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+.partner-books-disclosure strong {
+    margin-right: 3px;
+    color: #475569;
+    font-size: inherit;
+    font-weight: 600;
 }
 .partner-books-rails[hidden],
 .partner-books-popup[hidden] { display: none !important; }
 .partner-books-rails,
 .partner-books-popup { display: none; }
 
-/* The 900px learning column stays centered; ads occupy only the outer gutters. */
+/* Leave the 900px learning column centered and fill only the outer gutters. */
 @media (min-width: 1400px) {
     .partner-books-enhanced [data-partner-slot] { display: none; }
     .partner-books-rails { display: block; }
@@ -103,26 +58,18 @@
         position: fixed;
         top: 150px;
         z-index: 90;
-        width: 210px;
+        width: clamp(210px, calc((100vw - 1000px) / 2), 280px);
         max-height: calc(100dvh - 174px);
         overflow-y: auto;
         overscroll-behavior: contain;
         margin: 0;
-        padding: 16px;
-        background: #fff;
-        border-color: #e0e7f0;
-        box-shadow: 0 8px 26px rgba(30, 50, 80, .07);
+        box-shadow: 0 8px 26px rgba(30, 50, 80, .06);
     }
     .partner-books-left { right: calc(50% + 474px); }
     .partner-books-right { left: calc(50% + 474px); }
-    .partner-books-rails .partner-books-product { flex-direction: column; gap: 14px; }
-    .partner-books-rails .partner-books-cover { flex-basis: auto; width: 142px; height: 174px; }
-    .partner-books-rails .partner-books-title { font-size: 16px; }
-    .partner-books-rails .partner-books-disclosure { font-size: 12px; line-height: 1.65; }
-    .partner-books-rails .partner-books-link { width: 100%; font-size: 13px; }
 }
 
-/* A dismissible, non-modal bottom popup: no backdrop and no forced focus. */
+/* Keep the image popup dismissible, with the disclosure directly below it. */
 @media (max-width: 768px) {
     body.partner-books-enhanced { padding-bottom: var(--partner-popup-space, 0px); }
     .partner-books-enhanced [data-partner-slot] { display: none; }
@@ -131,15 +78,14 @@
         position: fixed;
         z-index: 900;
         inset: auto 12px max(12px, env(safe-area-inset-bottom)) 12px;
-        max-width: 480px;
-        max-height: min(50dvh, 360px);
+        max-width: 380px;
+        max-height: min(60dvh, 420px);
         overflow-y: auto;
         overscroll-behavior: contain;
         margin: 0 auto;
-        padding: 12px 16px 16px;
-        background: #fff;
+        padding: 6px 12px 12px;
         border: 1px solid #cdd9ea;
-        border-radius: 18px;
+        border-radius: 16px;
         box-shadow: 0 8px 38px rgba(15, 35, 65, .22);
     }
     .partner-books-popup-header {
@@ -148,10 +94,8 @@
         justify-content: space-between;
         gap: 8px;
         min-height: 44px;
-        margin: -8px -6px 0 0;
-        color: #334155;
-        font-size: 12px;
-        font-weight: 700;
+        color: #64748b;
+        font-size: 11px;
     }
     .partner-books-popup .partner-books-close {
         flex-shrink: 0;
@@ -164,24 +108,18 @@
         background: #f1f5f9;
         color: #334155;
         font: inherit;
+        font-size: 12px;
+        font-weight: 600;
         cursor: pointer;
     }
     .partner-books-popup .partner-books-close:focus-visible {
         outline: 3px solid #1d4ed8;
         outline-offset: 2px;
     }
-    .partner-books-popup .partner-books-disclosure {
-        margin: 6px 0 12px;
-        padding-bottom: 10px;
-        font-size: 12px;
-        line-height: 1.6;
+    .partner-books-popup .partner-books-cover {
+        height: clamp(150px, 32dvh, 260px);
+        aspect-ratio: auto;
     }
     .partner-books-popup .partner-books-disclosure strong { display: none; }
-    .partner-books-popup .partner-books-product { gap: 12px; align-items: center; }
-    .partner-books-popup .partner-books-cover { flex: 0 0 68px; width: 68px; height: 92px; }
-    .partner-books-popup .partner-books-label,
-    .partner-books-popup .partner-books-subtitle { display: none; }
-    .partner-books-popup .partner-books-title { margin-bottom: 8px; font-size: 14px; line-height: 1.5; }
-    .partner-books-popup .partner-books-link { min-height: 44px; padding: 8px 12px; font-size: 13px; }
 }
 @media print { .partner-books, .partner-books-rails { display: none !important; } }

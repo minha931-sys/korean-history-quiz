@@ -30,9 +30,6 @@
     const book = books[index % books.length];
     const image = slot.querySelector('.partner-books-cover');
     const link = slot.querySelector('.partner-books-link');
-    slot.querySelector('.partner-books-title').textContent = book.title;
-    slot.querySelector('.partner-books-subtitle').textContent = book.subtitle;
-    image.addEventListener('error', () => { image.hidden = true; });
     image.src = book.image;
     image.alt = book.title + ' 표지';
     link.href = book.url;
@@ -66,7 +63,7 @@
   const popupHeader = document.createElement('div');
   popupHeader.className = 'partner-books-popup-header';
   const popupLabel = document.createElement('span');
-  popupLabel.textContent = '한국사 교재 · 광고';
+  popupLabel.textContent = '광고';
   const closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'partner-books-close';
